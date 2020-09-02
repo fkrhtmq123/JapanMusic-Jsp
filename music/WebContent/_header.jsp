@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="/music/css/style.css">
     <link rel="stylesheet" href="/music/shop/css/shop_style.css">
+    <link rel="stylesheet" href="/music/board/css/board_style.css">
 </head>
 <body>
     <div id="music_wrapper">
@@ -98,7 +99,7 @@
                             <li><a href="#">サブ７</a></li>
                             <li><a href="#">サブ８</a></li>
                             <li><a href="#">サブ９</a></li>
-                            <li><a href="#">サブ１0</a></li>
+                            <li><a href="#">サブ10</a></li>
                         </ol>
                     </li>
                 </ul>

@@ -40,7 +40,7 @@
         <div>
             <div class="qna">
                 <h3>お問い合わせ</h3>
-                <a href="#">
+                <a href="/music/board/qna-list.do">
                     <span>more</span>
                     <i class="fas fa-chevron-right"></i>
                 </a>
@@ -69,7 +69,7 @@
             </div>
             <div class="notice">
                 <h3>お知らせ</h3>
-                <a href="#">
+                <a href="/music/board/notice-list.do">
                     <span>more</span>
                     <i class="fas fa-chevron-right"></i>
                 </a>

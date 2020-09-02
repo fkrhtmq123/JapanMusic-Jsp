@@ -152,7 +152,7 @@
     color: red;
 }
 .goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_title > div > span::after {
-    content: "円";
+    content: "�냶";
 }
 .paging_btn {
     display: block;
@@ -314,7 +314,7 @@
 }
 .goods_view > .content_box > .goods_info_box > div > table tr > th > span {}
 .goods_view > .content_box > .goods_info_box > div > table tr > th > span::after {
-    content: "円";
+    content: "�냶";
 }
 .goods_view > .content_box > .goods_info_box > div > table tr > td {
     padding: 10px;
@@ -325,7 +325,7 @@
     text-decoration: line-through;
 }
 .list_price > td > span::after {
-    content: "円";
+    content: "�냶";
 }
 .list_price > td > strong {
     font-size: 16px;
@@ -335,7 +335,7 @@
     font-weight: bold;
 }
 .selling_price > td::after {
-    content: "円";
+    content: "�냶";
 }
 .goods_view > .content_box > .goods_detail_box {
     float: left;
@@ -469,124 +469,6 @@
     line-height: 30px;
     text-align: right;
 }
-/* notice */
-.notice {
-    width: 1340px;
-    margin: 0 auto;
-}
-.notice .notice_title {
-    widows: 100%;
-    margin-top: 32px;
-    text-align: center;
-    border-bottom: 1px solid #d5d5d5;
-}
-.notice .notice_title > h3 {
-    display: inline-block;
-    font-size: 30px;
-    padding: 0 30px 13px 30px;
-    border-bottom: 1px solid #111;
-}
-.notice .content_box {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.notice > .content_box > table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.notice > .content_box > table tr {}
-.notice > .content_box > table tr > th {
-    border-top: 1px solid #a59f9f;
-    border-bottom: 1px solid #d5d5d5;
-    padding: 12px;
-}
-.notice > .content_box > table tr > td {
-    text-align: center;
-    padding: 12px;
-    border-bottom: 1px solid #d5d5d5;
-}
-.notice > .content_box > table tr > td:nth-child(2) {text-align: left;}
-.notice > .content_box > table tr > td:nth-child(3) {width: 160px;}
-.notice > .content_box > table tr > td:nth-child(4) {width: 160px;}
-.notice > .content_box > table tr > td:nth-child(5) {width: 160px;}
-.notice_search {
-    padding: 20px;
-}
-.notice_search > form {}
-.notice_search > form > div {
-    display: inline-block;
-    margin-left: 510px;
-}
-.notice_search > form > div > select {
-    padding: 5px;
-}
-.notice_search > form > div > input {
-    padding: 5px;
-}
-.notice_search > form > input[type=submit] {
-    padding: 5px;
-}
-/* qna */
-.qna {
-    width: 1340px;
-    margin: 0 auto;
-}
-.qna .qna_title {
-    widows: 100%;
-    margin-top: 32px;
-    text-align: center;
-    border-bottom: 1px solid #d5d5d5;
-}
-.qna .qna_title > h3 {
-    display: inline-block;
-    font-size: 30px;
-    padding: 0 30px 13px 30px;
-    border-bottom: 1px solid #111;
-}
-.qna .content_box {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.qna > .content_box > table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.qna > .content_box > table tr {}
-.qna > .content_box > table tr > th {
-    border-top: 1px solid #a59f9f;
-    border-bottom: 1px solid #d5d5d5;
-    padding: 12px;
-}
-.qna > .content_box > table tr > td {
-    text-align: center;
-    padding: 12px;
-    border-bottom: 1px solid #d5d5d5;
-}
-.qna > .content_box > table tr > td:nth-child(1) {width: 100px;}
-.qna > .content_box > table tr > td:nth-child(2) {width: 150px;}
-.qna > .content_box > table tr > td:nth-child(3) {text-align: left;}
-.qna > .content_box > table tr > td:nth-child(3) > a > i {
-    margin-right: 10px;
-}
-.qna > .content_box > table tr > td:nth-child(4) {width: 120px;}
-.qna > .content_box > table tr > td:nth-child(5) {width: 120px;}
-.qna_search {
-    padding: 20px;
-}
-.qna_search > form {}
-.qna_search > form > div {
-    display: inline-block;
-    margin-left: 510px;
-}
-.qna_search > form > div > select {
-    padding: 5px;
-}
-.qna_search > form > div > input {
-    padding: 5px;
-}
-.qna_search > form > input[type=submit] {
-    padding: 5px;
-}
 /* cart */
 .cart > section {
     width: 70%;
@@ -692,7 +574,7 @@
     text-align: left;
 }
 .cart .content_box > section > .order_goods_check > table tr > td > div > strong::after {
-    content: "個";
+    content: "��";
 }
 .cart .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div {}
 .cart .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div > a {
@@ -702,10 +584,10 @@
     border: 1px solid #d8d5d7;
 }
 .cart .content_box > section > .order_goods_check > table tr > td:nth-child(4) > p::after {
-    content: "円";
+    content: "�냶";
 }
 .cart .content_box > section > .order_goods_check > table tr > td:nth-child(6) > p::after {
-    content: "円";
+    content: "�냶";
 }
 .cart .content_box > section > .shopping {
     margin-top: 10px;
@@ -745,7 +627,7 @@
     color: red;
 }
 .cart .content_box > section > .order_price > div > ul > li > span::after {
-    content: "円";
+    content: "�냶";
 }
 .cart .content_box > section > .order_price > div > ul > li > i {
     margin-top: 15px;
@@ -883,7 +765,7 @@
     text-align: left;
 }
 .order .content_box > section > .order_goods_check > table tr > td > div > strong::after {
-    content: "個";
+    content: "��";
 }
 .order .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div {}
 .order .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div > a {
@@ -893,10 +775,10 @@
     border: 1px solid #d8d5d7;
 }
 .order .content_box > section > .order_goods_check > table tr > td:nth-child(3) > p::after {
-    content: "円";
+    content: "�냶";
 }
 .order .content_box > section > .order_goods_check > table tr > td:nth-child(5) > p::after {
-    content: "円";
+    content: "�냶";
 }
 .order .content_box > section > .shopping {
     margin-top: 10px;
@@ -937,7 +819,7 @@
     color: red;
 }
 .order .content_box > section > .order_price > div > ul > li > span::after {
-    content: "円";
+    content: "�냶";
 }
 .order .content_box > section > .order_price > div > ul > li > i {
     margin-top: 15px;
@@ -1055,7 +937,7 @@
     font-weight: bold;
 }
 .order .content_box > section > .price_info > div > table tr > td > span::after {
-    content: "円";
+    content: "�냶";
 }
 .order .content_box > section > .price_info > div > table tr > td > div {
     float: left;
@@ -1075,10 +957,10 @@
     margin-left: 10px;
 }
 .order .content_box > section > .price_info > div > table tr > td > div > p > span::after {
-    content: "円";
+    content: "�냶";
 }
 .order .content_box > section > .price_info > div > table tr > td > div > label > p > span::after {
-    content: "円";
+    content: "�냶";
 }
 .order .content_box > section > .final_order_price {
     width: 100%;
@@ -1108,7 +990,7 @@
     color: red;
 }
 .order .content_box > section > .final_order_price > div > ul > li > span::after {
-    content: "円";
+    content: "�냶";
 }
 .order .content_box > section > .order_button {
     width: 100%;
@@ -1247,7 +1129,7 @@
     text-align: left;
 }
 .order-complete .content_box > section > .order_goods_check > table tr > td > div > strong::after {
-    content: "個";
+    content: "��";
 }
 .order-complete .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div {}
 .order-complete .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div > a {
@@ -1257,10 +1139,10 @@
     border: 1px solid #d8d5d7;
 }
 .order-complete .content_box > section > .order_goods_check > table tr > td:nth-child(3) > p::after {
-    content: "円";
+    content: "�냶";
 }
 .order-complete .content_box > section > .order_goods_check > table tr > td:nth-child(5) > p::after {
-    content: "円";
+    content: "�냶";
 }
 .order-complete .content_box > section > .order_price {
     width: 100%;
@@ -1295,7 +1177,7 @@
     color: red;
 }
 .order-complete .content_box > section > .order_price > div > ul > li > span::after {
-    content: "円";
+    content: "�냶";
 }
 .order-complete .content_box > section > .order_price > div > ul > li > i {
     margin-top: 15px;
@@ -1406,7 +1288,7 @@
     color: red;
 }
 .order-complete .content_box > section > .final_order_price > div > ul > li > span::after {
-    content: "円";
+    content: "�냶";
 }
 .order-complete .content_box > section > .order_button {
     width: 100%;
