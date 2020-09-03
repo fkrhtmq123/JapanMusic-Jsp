@@ -45,7 +45,7 @@ public class QnaListService implements CommonService {
 	}
 	
 	public int getTotal() throws Exception {
-		return BoardDAO.getInstance().getTotalNotice();
+		return BoardDAO.getInstance().getTotalQna();
 	}
 	
 	public int getLastPage(int total) {
@@ -61,10 +61,7 @@ public class QnaListService implements CommonService {
 	}
 	
 	public int getStartLimit(int currentPage) {
-		//return (currentPage-1)*10;
-		int startLimit = (currentPage - 1) * 10;
-		
-		return startLimit;
+		return (currentPage-1)*10;
 	}
 	
 	public int getCurrentPage(String pg) {

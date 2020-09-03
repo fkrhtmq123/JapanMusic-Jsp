@@ -18,7 +18,7 @@
                 <th>題目</th>
                 <th>名前</th>
                 <th>状態</th>
-            </tr>
+            </tr>            
             <c:forEach var="qvo" items="${ qnas }">
             	<c:set var="listCount" value="${listCount = listCount - 1}"/>
             	<c:if test="${ listCount > 0 }">
@@ -26,7 +26,12 @@
 		                <td>${ qvo.rdate }</td>
 		                <td>${ qvo.cate }</td>
 		                <td>
-		                    <a href="#"><i class="fas fa-lock"></i>${ qvo.title }</a>
+		                    <a href="/music/board/qna-view.do?seq=${ qvo.seq }">
+			                    <c:if test="${ qvo.pass != null }">
+			                    	<i class="fas fa-lock"></i>
+			                    </c:if>
+		                    	${ qvo.title }
+		                    </a>
 		                </td>
 		                <td>${ qvo.name }</td>
 		                <td>${ qvo.answer }</td>

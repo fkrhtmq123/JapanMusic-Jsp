@@ -24,11 +24,11 @@
                                 <td>
                                     <select name="cate">
                                         <option value="qval1">お問い合わせ内容</option>
-                                        <option value="qval2">[会員・情報]</option>
-                                        <option value="qval3">[注文・決済]</option>
-                                        <option value="qval4">[配送]</option>
-                                        <option value="qval5">[返品・AS]</option>
-                                        <option value="qval6">[商品・イベント]</option>
+                                        <option>[会員・情報]</option>
+                                        <option>[注文・決済]</option>
+                                        <option>[配送]</option>
+                                        <option>[返品・AS]</option>
+                                        <option>[商品・イベント]</option>
                                     </select>
                                 </td>
                             </tr>
@@ -38,7 +38,7 @@
                                     <span>題目</span>
                                 </td>
                                 <td>
-                                    <input type="text" name="title" placeholder="">
+                                    <input type="text" name="title">
                                 </td>
                             </tr>
                             <tr>

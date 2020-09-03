@@ -61,10 +61,7 @@ public class NoticeListService implements CommonService {
 	}
 	
 	public int getStartLimit(int currentPage) {
-		//return (currentPage-1)*10;
-		int startLimit = (currentPage - 1) * 10;
-		
-		return startLimit;
+		return (currentPage-1)*10;
 	}
 	
 	public int getCurrentPage(String pg) {

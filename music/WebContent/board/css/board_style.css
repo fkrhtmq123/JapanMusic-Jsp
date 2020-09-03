@@ -885,4 +885,184 @@
     height: 50px;
     font-size: 16px;
 }
+/* qna-view */
+.qna-view > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.qna-view .content_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.qna-view .content_box > .title {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.qna-view .content_box > .title > h4 {
+    float: left;
+    font-size: 28px;
+}
+.qna-view .content_box > section {
+    width: 934px;
+    height: auto;
+    margin: 80px auto 0 auto;
+}
+.qna-view .content_box > section > form > .write-content {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+}
+.qna-view .content_box > section > form > .write-content > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.qna-view .content_box > section > form > .write-content > table tr {
+    border-bottom: 1px solid #d5d5d5;
+}
+.qna-view .content_box > section > form > .write-content > table tr:first-child {
+    border-top: 1px solid #757575;
+}
+.qna-view .content_box > section > form > .write-content > table tr > td {
+    padding: 10px;
+}
+.qna-view .content_box > section > form > .write-content > table tr > td > textarea {
+    width: 670px;
+    height: 300px;
+    padding: 10px;
+}
+.qna-view .content_box > section > form > .write-content > table tr > td:first-child {
+    width: 200px;
+    text-align: left;
+    background: #f7f4f4;
+}
+.qna-view .content_box > section > form > .write-content > table tr > td > p {}
+.qna-view .content_box > section > form > .write-content > table tr > td > strong {}
+.qna-view .content_box > section > form > .write-content > table tr > td > span {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.qna-view .content_box > section > form > .write-content > table tr > td > input {
+    width: 400px;
+    height: 30px;
+    padding: 0 10px;
+}
+.asterisk {
+    color: red;
+}
+.qna-view .content_box > section > form > div:last-child {
+    padding: 50px 0px 50px 600px;
+    overflow: hidden;
+}
+.qna-view .content_box > section > form > div > .listbtn {
+    display: inline-block;
+    height: auto;
+    box-sizing: border-box;
+}
+.qna-view .content_box > section > form > div > .listbtn > input[type=button] {
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+}
+.qna-view .content_box > section > form > div > .modifybtn {
+    display: inline-block;
+    height: auto;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.qna-view .content_box > section > form > div > .modifybtn > input[type=button] {
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+}
+.qna-view .content_box > section > form > div > .deletebtn {
+    display: inline-block;
+    height: auto;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.qna-view .content_box > section > form > div > .deletebtn > input[type=button] {
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+}
 /* qna_modify */
+/* qna_board_pass */
+.qna_board_pass > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.qna_board_pass .content_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.qna_board_pass .content_box > .title {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.qna_board_pass .content_box > div > h4 {
+    float: left;
+    font-size: 28px;
+}
+.qna_board_pass .content_box > section {
+    width: 934px;
+    height: auto;
+    margin: 80px auto 0 auto;
+}
+.qna_board_pass .content_box > section > form > .write-content {
+    width: 100%;
+    height: auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.qna_board_pass .content_box > section > form > .write-content > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.qna_board_pass .content_box > section > form > .write-content > table tr {
+    border-bottom: 1px solid #d5d5d5;
+}
+.qna_board_pass .content_box > section > form > .write-content > table tr:first-child {
+    border-top: 1px solid #757575;
+}
+.qna_board_pass .content_box > section > form > .write-content > table tr > td {
+    padding: 10px;
+}
+.qna_board_pass .content_box > section > form > .write-content > table tr > td > textarea {
+    width: 670px;
+    height: 300px;
+    padding: 10px;
+}
+.qna_board_pass .content_box > section > form > .write-content > table tr > td:first-child {
+    width: 200px;
+    text-align: left;
+    background: #f7f4f4;
+}
+.qna_board_pass .content_box > section > form > .write-content > table tr > td > p {}
+.qna_board_pass .content_box > section > form > .write-content > table tr > td > strong {}
+.qna_board_pass .content_box > section > form > .write-content > table tr > td > span {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.qna_board_pass .content_box > section > form > .write-content > table tr > td > input {
+    width: 400px;
+    height: 30px;
+    padding: 0 10px;
+}
+.qna_board_pass .content_box > section > form > .write-content > table tr > td > input[type=submit] {
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+}
+.asterisk {
+    color: red;
+}

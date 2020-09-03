@@ -20,7 +20,7 @@
                                     <span>題目</span>
                                 </td>
                                 <td>
-                                    <p class="notice_view_title"></p>
+                                    <p class="notice_view_title">${ vo.title }</p>
                                 </td>
                             </tr>
                             <tr>
@@ -29,14 +29,14 @@
                                     <span>内容</span>
                                 </td>
                                 <td>
-                                    <textarea name="notice_view_content" style="resize: none;" readonly></textarea>
+                                    <textarea name="notice_view_content" style="resize: none;" readonly>${ vo.content }</textarea>
                                 </td>
                             </tr>
                         </table>
                     </div>
                     <div>
                         <div class="listbtn">
-                            <input type="button" name="listbtn" value="リスト">
+                            <input type="button" name="listbtn" value="リスト" onClick="location.href='/music/board/notice-list.do'">
                         </div>
                         <div class="modifybtn">
                             <input type="button" name="modifybtn" value="修正">

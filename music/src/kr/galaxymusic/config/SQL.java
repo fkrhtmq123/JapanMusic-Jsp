@@ -42,6 +42,9 @@ public class SQL {
 	public final static String SELECT_NOTICE_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
 															+ "WHERE `parent`=0";
 	
+	public final static String SELECT_QNA_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_QNA` "
+															+ "WHERE `parent`=0";
+	
 	/*
 	public final static String UPDATE_ARTICLE = "UPDATE `JBOARD_ARTICLE` SET `title`=?, `content`=? "
 												+ "WHERE `seq`=?";
@@ -59,10 +62,12 @@ public class SQL {
 												+ "WHERE `seq`=?";
 	
 	public final static String SELECT_NOTICES = "SELECT * FROM `GM_NOTICE` WHERE `parent`=0 " 
-												+ "ORDER BY `seq` DESC LIMIT 10";
+												+ "ORDER BY `seq`DESC "
+												+ "LIMIT ?, 10";
 	
 	public final static String SELECT_QNAS = "SELECT * FROM `GM_QNA` WHERE `parent`=0 " 
-												+ "ORDER BY `seq` DESC LIMIT 10";
+												+ "ORDER BY `seq` DESC "
+												+ "LIMIT ?, 10";
 	
 	public final static String SELECT_ARTICLE_MAX_SEQ = "SELECT MAX(`seq`) FROM `JBOARD_ARTICLE`";
 	
@@ -84,40 +89,6 @@ public class SQL {
 												+ "`rdate`=NOW(), "
 												+ "`pass`=PASSWORD(?)";
 	
-	public final static String INSERT_FILE = "INSERT INTO `JBOARD_FILE` SET "
-											+ "`parent`=?, "
-											+ "`oldName`=?, "
-											+ "`newName`=?, "
-											+ "`rdate`=NOW()";
-	
-	public final static String UPDATE_FILE_DOWN_COUNT = "UPDATE `JBOARD_FILE` SET "
-														+ "`download` = `download`+1 "
-														+ "WHERE `seq`=?";
-	
-	
-	public final static String SELECT_COMMENTS = "SELECT a.*, b.nick FROM `JBOARD_ARTICLE` AS a "
-												+ "JOIN `JBOARD_MEMBER` AS b "
-												+ "ON a.uid = b.uid "
-												+ "WHERE `parent`=? "
-												+ "ORDER BY `seq` ASC";
-	
-	public final static String INSERT_COMMENT = "INSERT INTO `JBOARD_ARTICLE` SET "
-												+ "`parent`=?, "
-												+ "`cate`=?, "
-												+ "`content`=?, "
-												+ "`uid`=?, "
-												+ "`regip`=?, "
-												+ "`rdate`=NOW()";
-	
-	public final static String UPDATE_COMMENT = "UPDATE `JBOARD_ARTICLE` SET `content` = ? WHERE `seq` = ?";
-	
-	public final static String UPDATE_COMMENT_COUNT = "UPDATE `JBOARD_ARTICLE` SET `COMMENT` = `COMMENT` + 1 "
-														+ "WHERE `seq`=?";
-	
-	public final static String DELETE_COMMENT = "DELETE FROM `JBOARD_ARTICLE` "
-												+ "WHERE `seq`=?";
-	
-	public final static String DELETE_COMMENT_COUNT = "UPDATE `JBOARD_ARTICLE` SET `COMMENT` = `COMMENT` - 1 "
-														+ "WHERE `seq`=?";
-	
+	public final static String SELECT_QNA_PASS = "SELECT * FROM `GM_QNA` "
+												+ "WHERE `pass`=PASSWORD(?)";
 }

@@ -25,18 +25,20 @@
 		            <tr>
 	                	<td>${listCount}</td>
 		                <td>
-		                    <a href="#">${ vo.title }</a>
+		                    <a href="/music/board/notice-view.do?seq=${ vo.seq }">${ vo.title }</a>
 		                </td>
 		                <td>${ vo.rdate }</td>
 		                <td>${ vo.name }</td>
-		                <td>13</td>
+		                <td>0</td>
 		            </tr>
 		        </c:if>
             </c:forEach>
         </table>
-        <div class="notice_write_btn">
-            <a href="/music/board/notice-write.do">入力</a>
-        </div>
+        <c:if test="${ member.grade > 1 }">
+	        <div class="notice_write_btn">
+	            <a href="/music/board/notice-write.do">入力</a>
+	        </div>
+        </c:if>
         <span class="paging_btn">
             <ul>
             	<c:if test="${ groupStart > 1 }">

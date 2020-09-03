@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../_header.jsp" %>
+<link rel="stylesheet" href="/music/board/css/board_style.css">
 <section class="header_image">
     <span>楽器はGalaxy...</span>
 </section>
@@ -17,10 +18,28 @@
                             <tr>
                                 <td>
                                     <strong class="asterisk">*</strong>
+                                    <span>カテゴリー</span>
+                                </td>
+                                <td>
+                                    <p class="notice_view_title">${ qvo.cate }</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong class="asterisk">*</strong>
                                     <span>題目</span>
                                 </td>
                                 <td>
-                                    <p class="notice_view_title"></p>
+                                    <p class="notice_view_title">${ qvo.title }</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong class="asterisk">*</strong>
+                                    <span>状態</span>
+                                </td>
+                                <td>
+                                    <p class="notice_view_title">${ qvo.answer }</p>
                                 </td>
                             </tr>
                             <tr>
@@ -29,7 +48,7 @@
                                     <span>内容</span>
                                 </td>
                                 <td>
-                                    <textarea name="notice_view_content" style="resize: none;" readonly></textarea>
+                                    <textarea name="qna_view_content" style="resize: none;" readonly>${ qvo.content }</textarea>
                                 </td>
                             </tr>
                         </table>

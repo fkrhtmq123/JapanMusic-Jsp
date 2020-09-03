@@ -32,7 +32,7 @@ public class QnaWriteService implements CommonService {
 			vo.setPass(pass);
 			
 			BoardDAO dao = BoardDAO.getInstance();
-			dao.insertnotice(vo);
+			dao.insertqna(vo);
 			
 			return "redirect:/music/board/qna-list.do";
 			
