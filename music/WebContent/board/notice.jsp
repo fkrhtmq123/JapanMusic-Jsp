@@ -1,6 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../_header.jsp" %>
+<script>
+    $(document).ready(function(){
+        $('#search').click(function(){
+            var k = $('#keyword').val();
+
+            $("#notice-table > tbody > tr").hide();
+            var temp = $("#notice-table > tbody > tr > td:nth-child(5n+2):contains('" + k + "')");
+
+            $(temp).parent().show();
+        })
+    })
+</script>
 <section class="header_image">
     <span>楽器はGalaxy...</span>
 </section>
@@ -11,7 +23,7 @@
         </div>
     </section>
     <section class="content_box">
-        <table>
+        <table id="notice-table">
             <tr>
                 <th>番号</th>
                 <th>題目</th>
@@ -59,16 +71,16 @@
             </ul>
         </span>
         <div class="notice_search">
-            <form action="#">
+            <form action="#" method="get">
                 <div>
                     <select>
-                        <option value="val1">題目</option>
-                        <option value="val2">内容</option>
-                        <option value="val3">名前</option>
+                        <option value="title">題目</option>
+                        <option value="content">内容</option>
+                        <option value="name">名前</option>
                     </select>
-                    <input type="text">
+                    <input type="text" id="keyword">
                 </div>
-                <input type="submit" value="検索">
+                <input type="submit" id="search" value="検索">
             </form>
         </div>
     </section>
