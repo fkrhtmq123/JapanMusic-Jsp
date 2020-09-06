@@ -1,0 +1,1307 @@
+/* goods_list */
+.goods_list > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.goods_list .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.goods_list .select > h3 {
+    float: left;
+}
+.goods_list .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+#selectbox1 {
+    width: 100px;
+    margin-left: 10px;
+}
+#selectbox2 {
+    position: absolute;
+    left: 180px;
+    width: 100px;
+}
+#selectbox1 > option:hover {
+    display: block;
+}
+.goods_list .list_title {
+    widows: 100%;
+    margin-top: 32px;
+    text-align: center;
+}
+.goods_list .list_title > h3 {
+    display: inline-block;
+    font-size: 30px;
+    padding: 0 30px 13px 30px;
+    border-bottom: 1px solid #111;
+}
+.goods_list .sub_list_title {
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #bdb9b9;
+}
+.goods_list .sub_list_title > ul {
+    overflow: hidden;
+    padding: 30px;
+}
+.goods_list .sub_list_title > ul > li {
+    float: left;
+    width: 20%;
+}
+.goods_list .sub_list_title > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.goods_list .sub_list_title > ul > li > a:hover {
+    text-decoration: underline;
+}
+.goods_list .sub_list_title > ul > li > a > span {}
+.goods_list .sub_list_title > ul > li > a > em {
+    color: #afabab;
+}
+.goods_list > .content_box {
+    width: 70%;
+    height: auto;
+    margin-top: 30px;
+    border-bottom: 1px solid #d5d5d5;
+
+}
+.goods_list > .content_box > span {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #757575;
+    box-sizing: border-box;
+}
+.goods_list > .content_box > span > strong {
+    color: red;
+    font-weight: bold;
+}
+.goods_list > .content_box > div:nth-of-type(1) {
+    padding: 13px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+}
+.goods_list > .content_box > div:nth-of-type(1) > ul {
+    width: 100%;
+    overflow: hidden;
+}
+.goods_list > .content_box > div:nth-of-type(1) > ul > li {
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+.goods_list > .content_box > div:nth-of-type(1) > ul > li > a {}
+.goods_list > .content_box > div:nth-of-type(2) {
+    margin-top: 50px;
+    padding-left: 20px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.goods_list > .content_box > div:nth-of-type(2) > ul {
+    width: 100%;
+    overflow: hidden;
+}
+.goods_list > .content_box > div:nth-of-type(2) > ul > li {
+    float: left;
+    width: 24%;
+    height: 325px;
+    padding: 0 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content {
+    width: 100%;
+    height: 100%;
+}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_image {
+
+}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_image > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d5d5d5;
+}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_image > a > img {
+    width: 80%;
+}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_title {}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_title > div {}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_title > div > a {
+    display: block;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_title > div > a:hover {
+    text-decoration: underline;
+}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_title > div > span {
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+.goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_title > div > span::after {
+    content: "�냶";
+}
+.paging_btn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    padding: 40px;
+}
+.paging_btn > ul {
+    display: inline-block;
+    overflow: hidden;
+}
+.paging_btn > ul > li {
+    float: left;
+    width: 28px;
+    margin-right: 20px;
+}
+.paging_btn > ul > li > a {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 28px;
+    font-size: 14px;
+}
+.paging_btn > ul > li > a.on {
+    border-radius: 50%;
+    background: #757575;
+    color: white;
+}
+/* goods_view */
+.goods_view > section {
+    width: 1344px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.goods_view .select {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.goods_view .select > h3 {
+    float: left;
+}
+.goods_view .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.goods_view .select > h4 {
+    position: absolute;
+    top: 0; left: 165px;
+}
+.goods_view > .content_box {
+    overflow: hidden;
+}
+.goods_view > .content_box > .goods_img_box {
+    float: left;
+    width: 530px;
+    height: 620px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.goods_view > .content_box > .goods_img_box > div:nth-child(1) {
+    width: 100%;
+    height: 500px;
+}
+.goods_view > .content_box > .goods_img_box > div:nth-child(1) > img {
+    width: 100%;
+    height: 450px;
+    border: 1px solid #757575;
+}
+.goods_view > .content_box > .goods_img_box > div:nth-child(2) {
+    width: 100%;
+    height: 80px;
+}
+.goods_view > .content_box > .goods_img_box > div:nth-child(2) > ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.goods_view > .content_box > .goods_img_box > div:nth-child(2) > ul > li {
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px solid #d5d5d5;
+    box-sizing: border-box;
+}
+.goods_view > .content_box > .goods_img_box > div:nth-child(2) > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.goods_view > .content_box > .goods_img_box > div:nth-child(2) > ul > li:hover {
+    border: 1px solid #757575;
+}
+.goods_view > .content_box > .goods_img_box > div:nth-child(2) > ul > li > a > img {
+    width: 100%;
+    height: 100%;
+}
+.goods_view > .content_box > .goods_info_box {
+    float: left;
+    width: 770px;
+    height: 620px;
+    margin-left: 40px;
+    box-sizing: border-box;
+}
+.goods_view > .content_box > .goods_info_box > em {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+}
+.goods_view > .content_box > .goods_info_box > div:nth-child(2) {
+    padding: 10px 0;
+    border-bottom: 1px solid #d5d5d5;
+}
+.goods_view > .content_box > .goods_info_box > div:nth-child(3) {
+    height: 180px;
+    padding: 10px;
+}
+.goods_view > .content_box > .goods_info_box > div:nth-child(3) > ul {
+    margin-top: 40px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.goods_view > .content_box > .goods_info_box > div:nth-child(3) > ul > li {
+    float: left;
+    width: 30%;
+    height: 70px;
+    line-height: 70px;
+    background: #d5d5d5;
+    text-align: center;
+    margin-right: 10px;
+}
+.goods_view > .content_box > .goods_info_box > div:nth-child(3) > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+.goods_view > .content_box > .goods_info_box > div > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.goods_view > .content_box > .goods_info_box > div > table tr {
+    text-align: left;
+}
+.goods_view > .content_box > .goods_info_box > div > table tr > th {
+    width: 230px;
+    padding: 10px;
+    font-size: 16px;
+    color: #888484;
+}
+.goods_view > .content_box > .goods_info_box > div > table tr > th > span {}
+.goods_view > .content_box > .goods_info_box > div > table tr > th > span::after {
+    content: "�냶";
+}
+.goods_view > .content_box > .goods_info_box > div > table tr > td {
+    padding: 10px;
+    font-size: 16px;
+}
+.list_price > td > span {
+    font-size: 16px;
+    text-decoration: line-through;
+}
+.list_price > td > span::after {
+    content: "�냶";
+}
+.list_price > td > strong {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.selling_price > td {
+    font-weight: bold;
+}
+.selling_price > td::after {
+    content: "�냶";
+}
+.goods_view > .content_box > .goods_detail_box {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+.goods_view > .content_box > .goods_detail_box > div {
+    width: 100%;
+}
+.goods_view > .content_box > .goods_detail_box > div > div:nth-child(1) {
+    padding-top: 30px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.goods_view > .content_box > .goods_detail_box > div > div > ul {
+    overflow: hidden;
+    margin-left: 400px;
+}
+.goods_view > .content_box > .goods_detail_box > div > div > ul > li {
+    float: left;
+    width: 170px;
+    height: 43px;
+    border: 1px solid #d5d5d5;
+}
+.goods_view > .content_box > .goods_detail_box > div > div > ul > li.on > a {
+    color: white;
+    background: #757575;
+}
+.goods_view > .content_box > .goods_detail_box > div > div > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.goods_view > .content_box > .goods_detail_box > div > div:nth-child(2) > div {
+    overflow: hidden;
+}
+.goods_view > .content_box > .goods_detail_box > div > div:nth-child(2) > div > h6 {
+    float: left;
+    padding-top: 45px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#info_image > .goods_detail_image {
+    margin: 30px;
+}
+#review_list {}
+#review_list > div:nth-child(1) {
+    border-bottom: 1px solid #111;
+}
+#review_list > div:nth-child(1) > span {
+    float: right;
+    width: 140px;
+    text-align: center;
+    font-size: 14px;
+    margin: 30px 10px 10px 0;
+    border: 1px solid #d5d5d5;
+}
+#review_list > div:nth-child(1) > span > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 12px 0;
+}
+#review_list > div:nth-child(2) > table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+}
+#review_list > div:nth-child(2) > table tr {}
+#review_list > div:nth-child(2) > table tr > td {
+    padding: 15px;
+    border-bottom: 1px solid #d5d5d5;
+}
+#review_list > div:nth-child(2) > table tr > td:nth-child(2) {
+    width: 700px;
+    text-align: left;
+}
+#review_list > div:nth-child(2) > table tr > td:nth-child(3) {width: 130px;}
+#review_list > div:nth-child(2) > table tr > td:nth-child(4) {width: 130px;}
+#review_list > div:nth-child(2) > table tr > td > span {
+    display: block;
+    width: 200px;
+    height: 28px;
+    margin-left: 52px;
+    text-indent: -10000px;
+    background: url('./img/rating_star5.png') no-repeat;
+}
+#qna_list {}
+#qna_list > div:nth-child(1) {
+    border-bottom: 1px solid #111;
+}
+#qna_list > div:nth-child(1) > span {
+    float: right;
+    width: 140px;
+    text-align: center;
+    font-size: 14px;
+    margin: 30px 10px 10px 0;
+    border: 1px solid #d5d5d5;
+}
+#qna_list > div:nth-child(1) > span > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 12px 0;
+}
+#qna_list > div:nth-child(2) > table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+}
+#qna_list > div:nth-child(2) > table tr {}
+#qna_list > div:nth-child(2) > table tr > td {
+    padding: 15px;
+    border-bottom: 1px solid #d5d5d5;
+}
+#qna_list > div:nth-child(2) > table tr > td:nth-child(2) {
+    width: 700px;
+    text-align: left;
+}
+#qna_list > div:nth-child(2) > table tr > td:nth-child(3) {width: 130px;}
+#qna_list > div:nth-child(2) > table tr > td:nth-child(4) {width: 130px;}
+#qna_list > div:nth-child(2) > table tr > td:nth-child(5) {width: 130px;}
+#qna_list > div:nth-child(2) > table tr > td > span {
+    display: block;
+    width: 30px;
+    height: 28px;
+    line-height: 30px;
+    text-align: right;
+}
+/* cart */
+.cart > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.cart .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.cart .select > h3 {
+    float: left;
+}
+.cart .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.cart .content_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.cart .content_box > .title {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.cart .content_box > div > h4 {
+    float: left;
+    font-size: 28px;
+}
+.cart .content_box > div > div {
+    float: right;
+    margin-top: 20px;
+}
+.cart .content_box > div > div > label:nth-child(1) i {color: red;}
+.cart .content_box > div > div > label:nth-child(2) {color: #d5d5d5;}
+.cart .content_box > div > div > label:nth-child(3) {color: #d5d5d5;}
+.cart .content_box > div > div > label > span {
+    font-size: 16px;
+}
+.cart .content_box > div > div > label > span:first-child {
+    font-weight: bold;
+}
+.cart .content_box > div > div > label > span > i {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.cart .content_box > section {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.cart .content_box > section > .order_goods_check {}
+.cart .content_box > section > .order_goods_check > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart .content_box > section > .order_goods_check > table tr {}
+.cart .content_box > section > .order_goods_check > table tr > th {
+    padding: 10px;
+    background: #eceaea;
+    border-top: 1px solid #757575;
+    border-bottom: 1px solid #d5d5d5;
+}
+.cart .content_box > section > .order_goods_check > table tr > th:nth-child(1) {}
+.cart .content_box > section > .order_goods_check > table tr > td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+}
+.cart .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image {
+    display: inline-block;
+    width: 42px;
+}
+.cart .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.cart .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image > a > img {
+    width: 42px;
+}
+.cart .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title {
+    display: inline-block;
+    width: 300px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.cart .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title > a {
+    float: left;
+}
+.cart .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title > span {
+    float: left;
+    color: #807979;
+}
+.cart .content_box > section > .order_goods_check > table tr > td:nth-child(2) {
+    text-align: left;
+}
+.cart .content_box > section > .order_goods_check > table tr > td > div > strong::after {
+    content: "��";
+}
+.cart .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div {}
+.cart .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div > a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 0 2px;
+    border: 1px solid #d8d5d7;
+}
+.cart .content_box > section > .order_goods_check > table tr > td:nth-child(4) > p::after {
+    content: "�냶";
+}
+.cart .content_box > section > .order_goods_check > table tr > td:nth-child(6) > p::after {
+    content: "�냶";
+}
+.cart .content_box > section > .shopping {
+    margin-top: 10px;
+}
+.cart .content_box > section > .shopping > a {
+    text-decoration: underline;
+}
+.cart .content_box > section > .order_price {
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    border: 2px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.cart .content_box > section > .order_price > div {
+    float: right;
+    display: block;
+}
+.cart .content_box > section > .order_price > div > ul {
+    overflow: hidden;
+}
+.cart .content_box > section > .order_price > div > ul > li {
+    float: left;
+    margin-left: 25px;
+    text-align: right;
+}
+.cart .content_box > section > .order_price > div > ul > li > p {
+    font-size: 18px;
+}
+.cart .content_box > section > .order_price > div > ul > li > p > span {
+    font-size: 18px;
+}
+.cart .content_box > section > .order_price > div > ul > li > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+.cart .content_box > section > .order_price > div > ul > li > span::after {
+    content: "�냶";
+}
+.cart .content_box > section > .order_price > div > ul > li > i {
+    margin-top: 15px;
+}
+.cart .content_box > section > .order_check {
+    margin-top: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.cart .content_box > section > .order_check > .pick_goods_del {
+    float: left;
+}
+.cart .content_box > section > .order_check > .pick_goods_del > a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #d5d5d5
+}
+.cart .content_box > section > .order_check > .pick_goods_order {
+    float: right;
+}
+.cart .content_box > section > .order_check > .pick_goods_order > a {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 20px 30px;
+    font-size: 16px;
+    border: 1px solid #d5d5d5;
+}
+.cart .content_box > section > .order_check > .pick_goods_order > a:nth-child(2) {
+    background: #757575;
+    color: white;
+}
+/* order */
+.order > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.order .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.order .select > h3 {
+    float: left;
+}
+.order .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.order .content_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.order .content_box > .title {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.order .content_box > div > h4 {
+    float: left;
+    font-size: 28px;
+}
+.order .content_box > div > div {
+    float: right;
+    margin-top: 20px;
+}
+.order .content_box > div > div > label:nth-child(1) {color: #d5d5d5;}
+.order .content_box > div > div > label:nth-child(2) i {color: red;}
+.order .content_box > div > div > label:nth-child(3) {color: #d5d5d5;}
+.order .content_box > div > div > label > span {
+    font-size: 16px;
+}
+.order .content_box > div > div > label > span:first-child {
+    font-weight: bold;
+}
+.order .content_box > div > div > label > span > i {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.order .content_box > section {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.order .content_box > section > .order_goods_check {}
+.order .content_box > section > .order_goods_check > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.order .content_box > section > .order_goods_check > table tr {}
+.order .content_box > section > .order_goods_check > table tr > th {
+    padding: 10px;
+    background: #eceaea;
+    border-top: 1px solid #757575;
+    border-bottom: 1px solid #d5d5d5;
+}
+.order .content_box > section > .order_goods_check > table tr > th:nth-child(1) {}
+.order .content_box > section > .order_goods_check > table tr > td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+}
+.order .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image {
+    display: inline-block;
+    width: 42px;
+}
+.order .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.order .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image > a > img {
+    width: 42px;
+}
+.order .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title {
+    display: inline-block;
+    width: 300px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.order .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title > a {
+    float: left;
+}
+.order .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title > span {
+    float: left;
+    color: #807979;
+}
+.order .content_box > section > .order_goods_check > table tr > td:nth-child(1) {
+    text-align: left;
+}
+.order .content_box > section > .order_goods_check > table tr > td > div > strong::after {
+    content: "��";
+}
+.order .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div {}
+.order .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div > a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 0 3px;
+    border: 1px solid #d8d5d7;
+}
+.order .content_box > section > .order_goods_check > table tr > td:nth-child(3) > p::after {
+    content: "�냶";
+}
+.order .content_box > section > .order_goods_check > table tr > td:nth-child(5) > p::after {
+    content: "�냶";
+}
+.order .content_box > section > .shopping {
+    margin-top: 10px;
+}
+.order .content_box > section > .shopping > a {
+    text-decoration: underline;
+}
+.order .content_box > section > .order_price {
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    border: 2px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.order .content_box > section > .order_price > div {
+    float: right;
+    display: block;
+    width: 400px;
+}
+.order .content_box > section > .order_price > div > ul {
+    overflow: hidden;
+}
+.order .content_box > section > .order_price > div > ul > li {
+    float: left;
+    margin-left: 25px;
+    text-align: right;
+}
+.order .content_box > section > .order_price > div > ul > li > p {
+    font-size: 18px;
+}
+.order .content_box > section > .order_price > div > ul > li > p > span {
+    font-size: 18px;
+}
+.order .content_box > section > .order_price > div > ul > li > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+.order .content_box > section > .order_price > div > ul > li > span::after {
+    content: "�냶";
+}
+.order .content_box > section > .order_price > div > ul > li > i {
+    margin-top: 15px;
+}
+.order .content_box > section > .use_terms {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #d5d5d5;
+}
+.order .content_box > section > .use_terms > div {}
+.order .content_box > section > .use_terms > div > h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.order .content_box > section > .use_terms > div > textarea {
+    width: 100%;
+    resize: none;
+    margin-top: 10px;
+}
+.order .content_box > section > .use_terms > div > div {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.order .content_box > section > .use_terms > div > div > input {
+    float: left;
+}
+.order .content_box > section > .use_terms > div > div > span {
+    float: left;
+    margin-left: 10px;
+}
+.order .content_box > section > .use_terms > div > div > span > p {
+    display: inline-block;
+    color: red;
+}
+.order .content_box > section > .order_info {
+    margin-top: 30px;
+}
+.order .content_box > section > .delivery_info {
+    margin-top: 30px;
+}
+.order .content_box > section > .price_info {
+    margin-top: 30px;
+}
+.order .content_box > section > .price_means {
+    margin-top: 30px;
+}
+.order .content_box > section > .final_order_price {
+    margin-top: 30px;
+}
+.order .content_box > section > div > h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.order .content_box > section > div > div {
+    width: 100%;
+    box-sizing: border-box;
+}
+.order .content_box > section > div > div > table {
+    width: 100%;
+    margin-top: 5px;
+    border-top: 1px solid #757575;
+    border-collapse: collapse;
+}
+.order .content_box > section > div > div > table tr {}
+.order .content_box > section > div > div > table tr > th {
+    width: 140px;
+    padding: 15px;
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 1px solid #d5d5d5;
+    background: #f1f0f0;
+}
+.order .content_box > section > div > div > table tr > td {
+    padding: 15px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.order .content_box > section > div > div > table tr > td > label:last-child {
+    margin-left: 10px;
+}
+.order .content_box > section > div > div > table tr > td > input {
+    width: 220px;
+    height: 30px;
+    padding: 0 5px;
+}
+.order .content_box > section > div > div > table tr > td > div {
+    width: 320px;
+}
+.order .content_box > section > div > div > table tr > td > div > input[type=button] {
+    width: 70px;
+    height: 30px;
+}
+.order .content_box > section > div > div > table tr > td > div > input[name=zip] {
+    width: 220px;
+    height: 30px;
+    padding: 0 5px;
+}
+.order .content_box > section > div > div > table tr > td > div > input[name=addr1] {
+    width: 300px;
+    height: 30px;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+.order .content_box > section > div > div > table tr > td > div > input[name=addr2] {
+    width: 300px;
+    height: 30px;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+.order .content_box > section > div > div > table tr > td > div > input[type=radio] {
+    width: auto;
+    margin-left: 10px;
+}
+.order .content_box > section > .price_info > div > table tr > td > span {
+    font-size: 16px;
+    font-weight: bold;
+}
+.order .content_box > section > .price_info > div > table tr > td > span::after {
+    content: "�냶";
+}
+.order .content_box > section > .price_info > div > table tr > td > div {
+    float: left;
+    display: block;
+}
+.order .content_box > section > .price_info > div > table tr > td > div:nth-child(1) {
+    width: 100px;
+}
+.order .content_box > section > .price_info > div > table tr > td > div > label {}
+.order .content_box > section > .price_info > div > table tr > td > div > label > i {}
+.order .content_box > section > .price_info > div > table tr > td > div > label > p {
+    display: inline-block;
+}
+.order .content_box > section > .price_info > div > table tr > td > div > label > p > span {}
+.order .content_box > section > .price_info > div > table tr > td > div > p {
+    display: inline-block;
+    margin-left: 10px;
+}
+.order .content_box > section > .price_info > div > table tr > td > div > p > span::after {
+    content: "�냶";
+}
+.order .content_box > section > .price_info > div > table tr > td > div > label > p > span::after {
+    content: "�냶";
+}
+.order .content_box > section > .final_order_price {
+    width: 100%;
+    padding: 30px;
+    border: 2px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.order .content_box > section > .final_order_price > div {
+    float: right;
+    width: 280px;
+}
+.order .content_box > section > .final_order_price > div > ul {
+    overflow: hidden;
+}
+.order .content_box > section > .final_order_price > div > ul > li {
+    float: left;
+}
+.order .content_box > section > .final_order_price > div > ul > li > p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.order .content_box > section > .final_order_price > div > ul > li > span {
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+.order .content_box > section > .final_order_price > div > ul > li > span::after {
+    content: "�냶";
+}
+.order .content_box > section > .order_button {
+    width: 100%;
+    box-sizing: border-box;
+}
+.order .content_box > section > .order_button > div {
+    text-align: center;
+}
+.order .content_box > section > .order_button > div:nth-child(1) {
+    padding: 30px 0;
+}
+.order .content_box > section > .order_button > div > input[type=checkbox] {}
+.order .content_box > section > .order_button > div > span {}
+.order .content_box > section > .order_button > div > span > p {
+    display: inline-block;
+    color: red;
+}
+.order .content_box > section > .order_button > div > input[type=button] {
+    width: 300px;
+    height: 60px;
+    font-size: 26px;
+}
+/* order-complete */
+.order-complete > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.order-complete .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.order-complete .select > h3 {
+    float: left;
+}
+.order-complete .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.order-complete .content_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.order-complete .content_box > .title {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.order-complete .content_box > div > h4 {
+    float: left;
+    font-size: 28px;
+}
+.order-complete .content_box > div > div {
+    float: right;
+    margin-top: 20px;
+}
+.order-complete .content_box > div > div > label:nth-child(1) {color: #d5d5d5;}
+.order-complete .content_box > div > div > label:nth-child(2) {color: #d5d5d5;}
+.order-complete .content_box > div > div > label > span {
+    font-size: 16px;
+}
+.order-complete .content_box > div > div > label > span:first-child {
+    font-weight: bold;
+}
+.order-complete .content_box > div > div > label > span > i {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.order-complete .content_box > section {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.order-complete .content_box > section > .order_goods_complete {
+    padding: 40px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.order-complete .content_box > section > .order_goods_complete > div {
+    text-align: center;
+}
+.order-complete .content_box > section > .order_goods_complete > div > p {
+    display: inline-block;
+    font-size: 35px;
+}
+.order-complete .content_box > section > .order_goods_check {}
+.order-complete .content_box > section > .order_goods_check > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.order-complete .content_box > section > .order_goods_check > table tr {}
+.order-complete .content_box > section > .order_goods_check > table tr > th {
+    padding: 10px;
+    background: #eceaea;
+    border-top: 1px solid #757575;
+    border-bottom: 1px solid #d5d5d5;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > th:nth-child(1) {}
+.order-complete .content_box > section > .order_goods_check > table tr > td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image {
+    display: inline-block;
+    width: 42px;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_image > a > img {
+    width: 42px;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title {
+    display: inline-block;
+    width: 300px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title > a {
+    float: left;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td > div > .pick_goods_title > span {
+    float: left;
+    color: #807979;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td:nth-child(1) {
+    text-align: left;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td > div > strong::after {
+    content: "��";
+}
+.order-complete .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div {}
+.order-complete .content_box > section > .order_goods_check > table tr > .pick_goods_count > div > div > a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 0 3px;
+    border: 1px solid #d8d5d7;
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td:nth-child(3) > p::after {
+    content: "�냶";
+}
+.order-complete .content_box > section > .order_goods_check > table tr > td:nth-child(5) > p::after {
+    content: "�냶";
+}
+.order-complete .content_box > section > .order_price {
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    border: 2px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.order-complete .content_box > section > .order_price > div {
+    float: right;
+    display: block;
+    width: 400px;
+}
+.order-complete .content_box > section > .order_price > div > ul {
+    overflow: hidden;
+}
+.order-complete .content_box > section > .order_price > div > ul > li {
+    float: left;
+    margin-left: 25px;
+    text-align: right;
+}
+.order-complete .content_box > section > .order_price > div > ul > li > p {
+    font-size: 18px;
+}
+.order-complete .content_box > section > .order_price > div > ul > li > p > span {
+    font-size: 18px;
+}
+.order-complete .content_box > section > .order_price > div > ul > li > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+.order-complete .content_box > section > .order_price > div > ul > li > span::after {
+    content: "�냶";
+}
+.order-complete .content_box > section > .order_price > div > ul > li > i {
+    margin-top: 15px;
+}
+.order-complete .content_box > section > .order_info {
+    margin-top: 30px;
+}
+.order-complete .content_box > section > .delivery_info {
+    margin-top: 30px;
+}
+.order-complete .content_box > section > .price_info {
+    margin-top: 30px;
+}
+.order-complete .content_box > section > .price_means {
+    margin-top: 30px;
+}
+.order-complete .content_box > section > .final_order_price {
+    margin-top: 30px;
+}
+.order-complete .content_box > section > div > h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.order-complete .content_box > section > div > div {
+    width: 100%;
+    box-sizing: border-box;
+}
+.order-complete .content_box > section > div > div > table {
+    width: 100%;
+    margin-top: 5px;
+    border-top: 1px solid #757575;
+    border-collapse: collapse;
+}
+.order-complete .content_box > section > div > div > table tr {}
+.order-complete .content_box > section > div > div > table tr > th {
+    width: 140px;
+    padding: 15px;
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 1px solid #d5d5d5;
+    background: #f1f0f0;
+}
+.order-complete .content_box > section > div > div > table tr > td {
+    padding: 15px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.order-complete .content_box > section > div > div > table tr > td > label:last-child {
+    margin-left: 10px;
+}
+.order-complete .content_box > section > div > div > table tr > td > input {
+    width: 220px;
+    height: 30px;
+    padding: 0 5px;
+}
+.order-complete .content_box > section > div > div > table tr > td > div {
+    width: 320px;
+}
+.order-complete .content_box > section > div > div > table tr > td > div > input[type=button] {
+    width: 70px;
+    height: 30px;
+}
+.order-complete .content_box > section > div > div > table tr > td > div > input[name=zip] {
+    width: 220px;
+    height: 30px;
+    padding: 0 5px;
+}
+.order-complete .content_box > section > div > div > table tr > td > div > input[name=addr1] {
+    width: 300px;
+    height: 30px;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+.order-complete .content_box > section > div > div > table tr > td > div > input[name=addr2] {
+    width: 300px;
+    height: 30px;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+.order-complete .content_box > section > div > div > table tr > td > div > input[type=radio] {
+    width: auto;
+    margin-left: 10px;
+}
+.order-complete .content_box > section > .final_order_price {
+    width: 100%;
+    padding: 30px;
+    border: 2px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.order-complete .content_box > section > .final_order_price > div {
+    float: right;
+    width: 280px;
+}
+.order-complete .content_box > section > .final_order_price > div > ul {
+    overflow: hidden;
+}
+.order-complete .content_box > section > .final_order_price > div > ul > li {
+    float: left;
+}
+.order-complete .content_box > section > .final_order_price > div > ul > li > p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.order-complete .content_box > section > .final_order_price > div > ul > li > span {
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+.order-complete .content_box > section > .final_order_price > div > ul > li > span::after {
+    content: "�냶";
+}
+.order-complete .content_box > section > .order_button {
+    width: 100%;
+    box-sizing: border-box;
+}
+.order-complete .content_box > section > .order_button > div {
+    text-align: center;
+}
+.order-complete .content_box > section > .order_button > div:nth-child(1) {
+    padding: 30px 0;
+}
+.order-complete .content_box > section > .order_button > div > button {
+    width: 300px;
+    height: 60px;
+    font-size: 26px;
+}

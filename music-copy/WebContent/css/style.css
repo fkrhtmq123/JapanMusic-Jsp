@@ -1,0 +1,768 @@
+/* 珥덇린�솕 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px '怨좊뵓';
+}
+
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
+/* header */
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    border-bottom: 1px solid #d5d5d5;
+    z-index: 100;
+}
+header > .main {
+    float: left;
+    height: 100%;
+}
+header > .main.logo {
+    width: 15%;
+}
+header > .main.logo > a {
+    width: 100%;
+    height: 100%;
+}
+header > .main.logo > a > img {
+    width: 100%;
+    height: 100%;
+}
+header > .main.menu {
+    width: 70%;
+    line-height: 110px;
+}
+header > .main.menu > ul {
+    width: 100%;
+    height: 100%;
+}
+header > .main.menu > ul > li {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+header > .main.menu > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 100px;
+}
+header > .main.menu > ul > li > a:hover {
+    border-bottom: 2px solid #111;
+}
+header > .main.menu > ul > li > ol > li > a:hover {
+    font-weight: bold;
+}
+header > .main.menu > ul > li:first-child > ol {
+    border-left: 1px solid #d5d5d5;
+}
+header > .main.menu > ul > li > ol {
+    display: none;
+    position: relative;
+    background-color: white;
+    border-bottom: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+    z-index: 1000;
+}
+header > .main.menu > ul > li > ol > li {
+    height: 40px;
+    text-align: center;
+}
+header > .main.menu > ul > li > ol > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 37px;
+}
+header > .main.member {
+    width: 15%;
+    line-height: 110px;
+    text-align: center;
+}
+header > .main.member > div {
+    margin-top: 40px;
+}
+header > .main.member > div > a {
+    display: inline-block;
+    width: 20%;
+}
+header > .main.member > div > a {}
+header > .main.member > div > a > i {
+    font-size: 25px;
+}
+header > .main.member > div > ul {
+    position: absolute;
+    top: 65.5%; right: 5.5%;
+    display: none;
+    width: 60px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ece7e7;
+}
+header > .main.member > div > a:nth-child(2):hover + ul {
+    display: block;
+}
+header > .main.member > div > ul:hover {display: block;}
+header > .main.member > div > ul > li {
+    margin-top: 5px;
+}
+header > .main.member > div > ul > li > a:hover {
+    font-weight: bold;
+}
+.header_image {
+    width: 100%;
+    height: 150px;
+    background: url('../img/header_image.jpg');
+    background-position: -20px -480px;
+    box-sizing: border-box;
+}
+.header_image > span {
+    display: inline-block;
+    font-size: 30px;
+    margin: 80px 0 0 250px;
+}
+/* main */
+body {
+    padding-top: 100px;
+    z-index: 1;
+}
+main {
+    height: auto;
+}
+.index > .slider {
+    height: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background: #fff;
+    z-index: 1;
+}
+.index > .content {
+    width: 70%;
+    height: auto;
+    min-height: 500px;
+    margin: 0 auto;
+}
+.index .string_instrument {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    padding: 0 15px;
+    color: #fff;
+    background: #111;
+    box-sizing: border-box;
+}
+.index .string_instrument > p {
+    position: absolute;
+    top: 35px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.index .string_instrument > span {
+    display: block;
+    position: absolute;
+    top: 80px;
+    font-size: 16px;
+}
+.index .string_instrument > img {
+    position: absolute;
+    right: 15px; top: 0;
+    height: 150px;
+}
+.index .banner {
+    margin-top: 100px;
+}
+.index .banner > div {}
+.index .banner > div > ul {
+    overflow: hidden;
+}
+.index .banner > div > ul > li {
+    float: left;
+    height: 230px;
+    margin-left: 35px;
+}
+.index .banner > div > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.index .banner > div > ul > li > a:hover {
+    background: #d5d5d5;
+}
+.index .banner > div > ul > li > a > img {}
+.index > .content > div:last-child {
+    width: 100%;
+    height: 230px;
+    margin: 50px 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.index > .content > div:last-child > div {
+    width: 45%;
+    height: auto;
+}
+.index > .content > div:last-child > div > h3 {
+    display: inline-block;
+    font-size: 25px;
+}
+.index > .content > div:last-child > div > a {
+    float: right;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.index > .content > div:last-child > div > a > span {
+    margin-right: 10px;
+}
+.index > .content > div:last-child > div > a > i {}
+.index > .content > div:last-child > div > ul {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.index > .content > div:last-child > div > ul > li {
+    width: 100%;
+    height: auto;
+}
+.index > .content > div:last-child > div > ul > li > a {
+    float: left;
+    display: block;
+    width: 75%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.index > .content > div:last-child > div > ul > li > span {
+    float: right;
+    font-size: 14px;
+}
+.index > .content > div:last-child > .qna {
+    float: left;
+}
+.index > .content > div:last-child > .notice {
+    float: right;
+}
+/* footer */
+footer {
+    width: 100%;
+    height: auto;
+}
+footer > section {
+    width: 1340px;
+    height: auto;
+    margin: 0 auto;
+}
+footer > section:first-child {
+    width: 100%;
+    background-color: #3c3c3c;
+}
+footer > section > .introduce {
+    position: relative;
+    width: 1340px;
+    height: 50px;
+    margin: 0 auto;
+}
+footer > section > .introduce > ul {
+    position: absolute;
+    top: 15px;
+}
+footer > section > .introduce > ul > li {
+    float: left;
+    padding: 0 20px;
+    border-right: 1px solid #fff;
+}
+footer > section > .introduce > ul > li > a {
+    color: #fff; 
+}
+footer > section > .companyinfo {
+    height: auto;
+    margin-top: 15px;
+}
+footer > section > .companyinfo > div {
+    height: auto;
+    padding: 18px 0;
+    overflow: hidden;
+}
+footer > section > .companyinfo > div > div {
+    float: left;
+    width: 30%;
+    height: 130px;
+    padding-left: 15px;
+    border-right: 1px solid #d5d5d5;
+}
+footer > section > .companyinfo > div > ul {
+    float: left;
+    width: 30%;
+    height: 150px;
+    margin-left: 15px;
+}
+footer > section > .companyinfo > div > ul > li {}
+footer > section > .companyinfo > div > ul > li > span {
+    float: right;
+}
+footer > section > .companyinfo > .info {
+    border-top: 1px solid #d5d5d5;
+    color: #757575;
+    padding: 15px 0 0 15px;
+}
+footer > section > .companyinfo > .info > p {
+    line-height: 25px;
+}
+footer > section > .companyinfo > div h3 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+footer > section > .companyinfo > div strong {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+footer > section > .companyinfo > div p {
+    color: #757575;
+    font-size: 15px;
+    line-height: 25px;
+}
+/* login */
+.login {}
+.login > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.login .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.login .select > h3 {
+    float: left;
+}
+.login .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.login .content_box {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.login .content_box > div {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.login .content_box > div > h4 {
+    font-size: 35px;
+}
+.login .content_box > .member_login {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 60px 0 0 70px;
+    border: 1px solid #d5d5d5;
+    box-sizing: border-box;
+}
+.login .content_box > .member_login > form {
+    position: relative;
+    width: 450px;
+    height: auto;
+}
+.login .content_box > .member_login div {
+    width: 280px;
+    display: inline-block;
+}
+.login .content_box > .member_login div > input {
+    float: left;
+    width: 280px;
+    height: 36px;
+    margin-top: 13px;
+    padding-left: 5px;
+    border: 1px solid #757575;
+}
+.login .content_box > .member_login > form > input {
+    position: absolute;
+    top: 5px;
+    width: 150px;
+    height: 100px;
+    margin-left: 15px;
+    font-size: 18px;
+    border: 1px solid #757575;
+}
+.login .content_box > .member_login > div {
+    width: 450px;
+    margin-top: 10px;
+    border-top: 1px solid #d5d5d5;
+}
+.login .content_box > .member_login > div > ul {
+    margin-top: 10px;
+}
+.login .content_box > .member_login > div > ul > li {
+    float: left;
+    width: 31%;
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid #d5d5d5;
+}
+.login .content_box > .member_login > div > ul > li:first-child {
+    margin-left: 5px;
+}
+.login .content_box > .member_login > div > ul > li:last-child {
+    margin-right: 0;
+}
+.login .content_box > .member_login > div > ul > li:first-child > a {
+    padding-top: 12px;
+    font-size: 16px;
+    color: white;
+    background: #757575;
+}
+.login .content_box > .member_login > div > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 7px;
+    box-sizing: border-box;
+}
+/* terms */
+.terms > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.terms .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.terms .select > h3 {
+    float: left;
+}
+.terms .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.terms .content_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.terms .content_box > .title {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.terms .content_box > div > h4 {
+    float: left;
+    font-size: 28px;
+}
+.terms .content_box > div > div {
+    float: right;
+    margin-top: 20px;
+}
+.terms .content_box > div > div > label:nth-child(1) i {color: red;}
+.terms .content_box > div > div > label:nth-child(2) {color: #d5d5d5;}
+.terms .content_box > div > div > label:nth-child(3) {color: #d5d5d5;}
+.terms .content_box > div > div > label > span {
+    font-size: 16px;
+}
+.terms .content_box > div > div > label > span:first-child {
+    font-weight: bold;
+}
+.terms .content_box > div > div > label > span > i {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.terms .content_box > .member_terms {
+    width: 880px;
+    margin: 60px auto 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.terms .content_box > .member_terms > div {
+    width: 100%;
+    margin: 0;
+}
+.terms .content_box > .member_terms > div:first-child {
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 20px;
+}
+.terms .content_box > .member_terms > div:first-child > h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.terms .content_box > .member_terms > div > input[type=checkbox] {
+    float: left;
+    width: 15px;
+    height: 15px;
+}
+.terms .content_box > .member_terms > div > div {
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.terms .content_box > .member_terms > div > div > span {
+    color: red;
+}
+.terms .content_box > .member_terms > div > div > em {}
+.terms .content_box > .member_terms > div > textarea {
+    float: left;
+    width: 99%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.terms .content_box > .member_terms > div:last-child > span {
+    margin-left: 10px;
+}
+.terms .content_box > .member_terms > div:last-child > span > p {
+    margin-left: 135px;
+    margin-top: -16px;
+    color: #757575;
+}
+.terms .content_box > div:last-child {
+    width: 880px;
+    padding: 40px;
+    margin: 0 auto;
+}
+.terms .content_box > div:last-child > a {
+    display: block;
+    width: 130px;
+    height: 60px;
+    margin: 0 auto;
+    border: 1px solid #111;
+    text-align: center;
+    line-height: 55px;
+    font-size: 18px;
+    background: #d5d5d5;
+}
+/* register */
+.register > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.register .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.register .select > h3 {
+    float: left;
+}
+.register .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.register .content_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.register .content_box > .title {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.register .content_box > div > h4 {
+    float: left;
+    font-size: 28px;
+}
+.register .content_box > div > div {
+    float: right;
+    margin-top: 20px;
+}
+.register .content_box > div > div > label:nth-child(1) {color: #d5d5d5;}
+.register .content_box > div > div > label:nth-child(2) i {color: red;}
+.register .content_box > div > div > label:nth-child(3) {color: #d5d5d5;}
+.register .content_box > div > div > label > span {
+    font-size: 16px;
+}
+.register .content_box > div > div > label > span:first-child {
+    font-weight: bold;
+}
+.register .content_box > div > div > label > span > i {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.register .content_box > section {
+    width: 934px;
+    height: auto;
+    margin: 80px auto 0 auto;
+}
+.register .content_box > section > div:first-child {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.register .content_box > section > div:first-child > h5 {
+    font-size: 28px;
+}
+.register .content_box > section > div:first-child > label {
+    float: right;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.register .content_box > section > form > .member_register {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+}
+.register .content_box > section > form > .member_register > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.register .content_box > section > form > .member_register > table tr {
+    border-bottom: 1px solid #d5d5d5;
+}
+.register .content_box > section > form > .member_register > table tr:first-child {
+    border-top: 1px solid #757575;
+}
+.register .content_box > section > form > .member_register > table tr > td {
+    padding: 10px;
+}
+.register .content_box > section > form > .member_register > table tr > td:first-child {
+    width: 200px;
+    text-align: left;
+    background: #f7f4f4;
+}
+.register .content_box > section > form > .member_register > table tr > td > strong {}
+.register .content_box > section > form > .member_register > table tr > td > span {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.register .content_box > section > form > .member_register > table tr > td > input {
+    width: 400px;
+    height: 30px;
+    padding: 0 10px;
+}
+.asterisk {
+    color: red;
+}
+.register .content_box > section > form > .member_register > table tr > td > input[name=zip] {
+    width: 200px;
+}
+.register .content_box > section > form > .member_register > table tr > td > input[type=button] {
+    width: 70px;
+}
+.register .content_box > section > form > .member_register > table tr > td > input:nth-child(3) {
+    margin-top: 10px;
+}
+.register .content_box > section > form > .member_register > table tr > td > input:nth-child(4) {
+    margin-top: 10px;
+}
+.register .content_box > section > form > .resultbtn {
+    width: 100%;
+    height: auto;
+    padding: 50px 350px;
+    box-sizing: border-box;
+}
+.register .content_box > section > form > .resultbtn > input[type=submit] {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+}
+/* register-complete*/
+.register_complete > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.register_complete .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.register_complete .select > h3 {
+    float: left;
+}
+.register_complete .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.register_complete .content_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.register_complete .content_box > .title {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.register_complete .content_box > div > h4 {
+    float: left;
+    font-size: 28px;
+}
+.register_complete .content_box > div > div {
+    float: right;
+    margin-top: 20px;
+}
+.register_complete .content_box > div > div > label:nth-child(1) {color: #d5d5d5;}
+.register_complete .content_box > div > div > label:nth-child(2) {color: #d5d5d5;}
+.register_complete .content_box > div > div > label:nth-child(3) {}
+.register_complete .content_box > div > div > label > span {
+    font-size: 16px;
+}
+.register_complete .content_box > div > div > label > span:first-child {
+    font-weight: bold;
+}
+.register_complete .content_box > div > div > label > span > i {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.register_complete .content_box > section {
+    width: 100%;
+    height: auto;
+}
+.register_complete .content_box > section > .member_result {
+    padding: 100px 400px;
+}
+.register_complete .content_box > section > .member_result > p {
+    font-size: 40px;
+}
+.register_complete .content_box > section > .member_result > p > i {
+    font-size: 40px;
+}
+.register_complete .content_box > section > .member_result > span {
+    font-size: 20px;
+    margin-left: 80px;
+}
+.register_complete .content_box > section > button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 550px;
+    margin-bottom: 100px;
+}
