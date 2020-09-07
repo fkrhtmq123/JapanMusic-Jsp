@@ -107,10 +107,10 @@
             <div class="main member">
                 <div>
                     <a href="#"><i class="fas fa-search"></i></a>
-                    <a href="#"><i class="fas fa-user"></i></a>
+                    <a href="/music/user/login.do"><i class="fas fa-user"></i></a>
                     <ul>
                     	<c:choose>
-                    		<c:when test="${ empty member }">
+                    		<c:when test="${empty member}">
 		                        <li><a href="/music/user/login.do">ログイン</a></li>
 		                        <li><a href="/music/user/terms.do">新規登録</a></li>
 	                        </c:when>

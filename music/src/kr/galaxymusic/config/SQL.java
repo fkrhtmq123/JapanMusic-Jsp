@@ -42,6 +42,15 @@ public class SQL {
 	public final static String SELECT_NOTICE_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
 															+ "WHERE `parent`=0";
 	
+	public final static String SELECT_NOTICE_TITLE_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
+																+ "WHERE `title` LIKE ?";
+	
+	public final static String SELECT_NOTICE_CONTENT_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
+																+ "WHERE `content` LIKE ?";
+	
+	public final static String SELECT_NOTICE_NAME_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
+																+ "WHERE `name` LIKE ?";
+	
 	public final static String SELECT_QNA_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_QNA` "
 															+ "WHERE `parent`=0";
 	
@@ -64,6 +73,17 @@ public class SQL {
 	public final static String SELECT_NOTICES = "SELECT * FROM `GM_NOTICE` WHERE `parent`=0 " 
 												+ "ORDER BY `seq`DESC "
 												+ "LIMIT ?, 10";
+	
+	public final static String SELECT_SEARCH_NOTICES_TITLE = "SELECT * FROM `GM_NOTICE` WHERE `title` LIKE ? " 
+														+ "ORDER BY `seq`DESC "
+														+ "LIMIT ?, 10";
+	public final static String SELECT_SEARCH_NOTICES_CONTENT = "SELECT * FROM `GM_NOTICE` WHERE `content` LIKE ? " 
+														+ "ORDER BY `seq`DESC "
+														+ "LIMIT ?, 10";
+	
+	public final static String SELECT_SEARCH_NOTICES_NAME = "SELECT * FROM `GM_NOTICE` WHERE `name` LIKE ? " 
+														+ "ORDER BY `seq`DESC "
+														+ "LIMIT ?, 10";
 	
 	public final static String SELECT_QNAS = "SELECT * FROM `GM_QNA` WHERE `parent`=0 " 
 												+ "ORDER BY `seq` DESC "

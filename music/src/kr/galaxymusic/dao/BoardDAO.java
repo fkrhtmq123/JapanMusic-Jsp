@@ -64,6 +64,66 @@ public class BoardDAO {
 		return total;
 	}
 	
+	public int TitleTotalNotice(String keyword) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_NOTICE_TITLE_TOTAL_COUNT);
+		psmt.setString(1, "%" + keyword + "%");
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int total = 0;
+		if(rs.next()) {
+			total = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return total;
+	}
+	
+	public int ContentTotalNotice(String keyword) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_NOTICE_CONTENT_TOTAL_COUNT);
+		psmt.setString(1, "%" + keyword + "%");
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int total = 0;
+		if(rs.next()) {
+			total = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return total;
+	}
+	
+	public int NameTotalNotice(String keyword) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_NOTICE_NAME_TOTAL_COUNT);
+		psmt.setString(1, "%" + keyword + "%");
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int total = 0;
+		if(rs.next()) {
+			total = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return total;
+	}
+	
 	public int getTotalQna() throws Exception {
 		
 		Connection conn = DBConfig.getConnetion();
@@ -88,6 +148,99 @@ public class BoardDAO {
 		Connection conn = DBConfig.getConnetion();
 		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_NOTICES);
 		psmt.setInt(1, start);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		List<ArticleVO> notices = new ArrayList<>();
+		while(rs.next()) {
+			ArticleVO vo = new ArticleVO();
+			vo.setSeq(rs.getInt(1));
+			vo.setParent(rs.getInt(2));
+			vo.setTitle(rs.getString(3));
+			vo.setContent(rs.getString(4));
+			vo.setUid(rs.getString(5));
+			vo.setName(rs.getString(6));
+			vo.setRegip(rs.getString(7));
+			vo.setRdate(rs.getString(8).substring(2, 10));
+			vo.setHit(rs.getInt(9));
+			notices.add(vo);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return notices;		
+	}
+	
+	public List<ArticleVO> SearchNoticeTitles(String keyword, int start) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_SEARCH_NOTICES_TITLE);
+		psmt.setString(1, "%" + keyword + "%");
+		psmt.setInt(2, start);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		List<ArticleVO> notices = new ArrayList<>();
+		while(rs.next()) {
+			ArticleVO vo = new ArticleVO();
+			vo.setSeq(rs.getInt(1));
+			vo.setParent(rs.getInt(2));
+			vo.setTitle(rs.getString(3));
+			vo.setContent(rs.getString(4));
+			vo.setUid(rs.getString(5));
+			vo.setName(rs.getString(6));
+			vo.setRegip(rs.getString(7));
+			vo.setRdate(rs.getString(8).substring(2, 10));
+			vo.setHit(rs.getInt(9));
+			notices.add(vo);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return notices;		
+	}
+	
+	public List<ArticleVO> SearchNoticeContents(String keyword, int start) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_SEARCH_NOTICES_CONTENT);
+		psmt.setString(1, "%" + keyword + "%");
+		psmt.setInt(2, start);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		List<ArticleVO> notices = new ArrayList<>();
+		while(rs.next()) {
+			ArticleVO vo = new ArticleVO();
+			vo.setSeq(rs.getInt(1));
+			vo.setParent(rs.getInt(2));
+			vo.setTitle(rs.getString(3));
+			vo.setContent(rs.getString(4));
+			vo.setUid(rs.getString(5));
+			vo.setName(rs.getString(6));
+			vo.setRegip(rs.getString(7));
+			vo.setRdate(rs.getString(8).substring(2, 10));
+			vo.setHit(rs.getInt(9));
+			notices.add(vo);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return notices;		
+	}
+	
+	public List<ArticleVO> SearchNoticeNames(String keyword, int start) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_SEARCH_NOTICES_NAME);
+		psmt.setString(1, "%" + keyword + "%");
+		psmt.setInt(2, start);
 		
 		ResultSet rs = psmt.executeQuery();
 		
