@@ -64,17 +64,17 @@
 	            	<ul>
 		            	<c:if test="${ groupStart > 1 }">
 			                <li>
-			                    <a href="/music/board/notice-search.do?category=${category}&keyword=${keyword}&pg=${groupStart-1}">이전</a>
+			                    <a href="/music/board/notice-search.do?searchCategory=${category}&searchKeyword=${keyword}&pg=${groupStart-1}">이전</a>
 			                </li>
 		                </c:if>
 		                <c:forEach var="i" begin="${groupStart}" end="${groupEnd}">
 			                <li>
-			                    <a href="/music/board/notice-search.do?category=${category}&keyword=${keyword}&pg=${i}" class="num ${currentPage==i ? 'on':''}">${i}</a>
+			                    <a href="/music/board/notice-search.do?searchCategory=${category}&searchKeyword=${keyword}&pg=${i}" class="num ${currentPage==i ? 'on':''}">${i}</a>
 			                </li>
 		                </c:forEach>
 		                <c:if test="${ groupEnd < lastPage }">
 			                <li>
-			                    <a href="/music/board/notice-search.do?category=${category}&keyword=${keyword}&pg=${groupEnd+1}">다음</a>
+			                    <a href="/music/board/notice-search.do?searchCategory=${category}&searchKeyword=${keyword}&pg=${groupEnd+1}">다음</a>
 			                </li>
 		                </c:if>
 		            </ul>

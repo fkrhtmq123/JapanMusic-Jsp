@@ -44,26 +44,12 @@
                     <i class="fas fa-chevron-right"></i>
                 </a>
                 <ul>
-                    <li>
-                        <a href="#">入金はどうすればいいですか？</a>
-                        <span>2020-08-19</span>
-                    </li>
-                    <li>
-                        <a href="#">入金はどうすればいいですか？</a>
-                        <span>2020-08-19</span>
-                    </li>
-                    <li>
-                        <a href="#">入金はどうすればいいですか？</a>
-                        <span>2020-08-19</span>
-                    </li>
-                    <li>
-                        <a href="#">入金はどうすればいいですか？</a>
-                        <span>2020-08-19</span>
-                    </li>
-                    <li>
-                        <a href="#">入金はどうすればいいですか？</a>
-                        <span>2020-08-19</span>
-                    </li>
+                	<c:forEach var="ql" items="${QnalatestList}">
+	                    <li>
+	                        <a href="/music/board/qna-view.do?seq=${ ql.seq }">${ql.title}</a>
+	                        <span>${ql.rdate}</span>
+	                    </li>
+                    </c:forEach>
                 </ul>
             </div>
             <div class="notice">
@@ -73,26 +59,12 @@
                     <i class="fas fa-chevron-right"></i>
                 </a>
                 <ul>
-                    <li>
-                        <a href="#">新しいホームページをオープンしました。</a>
-                        <span>2020-08-19</span>
-                    </li>
-                    <li>
-                        <a href="#">新しいホームページをオープンしました。</a>
-                        <span>2020-08-19</span>
-                    </li>
-                    <li>
-                        <a href="#">新しいホームページをオープンしました。</a>
-                        <span>2020-08-19</span>
-                    </li>
-                    <li>
-                        <a href="#">新しいホームページをオープンしました。</a>
-                        <span>2020-08-19</span>
-                    </li>
-                    <li>
-                        <a href="#">新しいホームページをオープンしました。</a>
-                        <span>2020-08-19</span>
-                    </li>
+                    <c:forEach var="nl" items="${NoticelatestList}">
+	                    <li>
+	                        <a href="/music/board/notice-view.do?seq=${ nl.seq }">${nl.title}</a>
+	                        <span>${nl.rdate}</span>
+	                    </li>
+                    </c:forEach>
                 </ul>
             </div>
         </div>

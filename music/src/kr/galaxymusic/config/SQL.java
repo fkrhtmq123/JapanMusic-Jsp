@@ -39,6 +39,14 @@ public class SQL {
 	*/
 	
 	// 게시물 관련
+	public final static String SELECT_NOTICE_LATEST = "SELECT * FROM `GM_NOTICE` "
+														+ "ORDER BY `seq`DESC "
+														+ "LIMIT 5";
+	
+	public final static String SELECT_QNA_LATEST = "SELECT * FROM `GM_QNA` "
+													+ "ORDER BY `seq`DESC "
+													+ "LIMIT 5";
+	
 	public final static String SELECT_NOTICE_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
 															+ "WHERE `parent`=0";
 	
@@ -53,6 +61,15 @@ public class SQL {
 	
 	public final static String SELECT_QNA_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_QNA` "
 															+ "WHERE `parent`=0";
+	
+	public final static String SELECT_QNA_TITLE_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
+																+ "WHERE `title` LIKE ?";
+
+	public final static String SELECT_QNA_CONTENT_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
+																	+ "WHERE `content` LIKE ?";
+	
+	public final static String SELECT_QNA_NAME_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `GM_NOTICE` "
+																+ "WHERE `name` LIKE ?";
 	
 	/*
 	public final static String UPDATE_ARTICLE = "UPDATE `JBOARD_ARTICLE` SET `title`=?, `content`=? "
@@ -75,19 +92,30 @@ public class SQL {
 												+ "LIMIT ?, 10";
 	
 	public final static String SELECT_SEARCH_NOTICES_TITLE = "SELECT * FROM `GM_NOTICE` WHERE `title` LIKE ? " 
-														+ "ORDER BY `seq`DESC "
-														+ "LIMIT ?, 10";
+															+ "ORDER BY `seq`DESC "
+															+ "LIMIT ?, 10";
 	public final static String SELECT_SEARCH_NOTICES_CONTENT = "SELECT * FROM `GM_NOTICE` WHERE `content` LIKE ? " 
-														+ "ORDER BY `seq`DESC "
-														+ "LIMIT ?, 10";
+															+ "ORDER BY `seq`DESC "
+															+ "LIMIT ?, 10";
 	
 	public final static String SELECT_SEARCH_NOTICES_NAME = "SELECT * FROM `GM_NOTICE` WHERE `name` LIKE ? " 
-														+ "ORDER BY `seq`DESC "
-														+ "LIMIT ?, 10";
+															+ "ORDER BY `seq`DESC "
+															+ "LIMIT ?, 10";
 	
 	public final static String SELECT_QNAS = "SELECT * FROM `GM_QNA` WHERE `parent`=0 " 
 												+ "ORDER BY `seq` DESC "
 												+ "LIMIT ?, 10";
+	
+	public final static String SELECT_SEARCH_QNAS_TITLE = "SELECT * FROM `GM_QNA` WHERE `title` LIKE ? " 
+																+ "ORDER BY `seq`DESC "
+																+ "LIMIT ?, 10";
+	public final static String SELECT_SEARCH_QNAS_CONTENT = "SELECT * FROM `GM_QNA` WHERE `content` LIKE ? " 
+																+ "ORDER BY `seq`DESC "
+																+ "LIMIT ?, 10";
+	
+	public final static String SELECT_SEARCH_QNAS_NAME = "SELECT * FROM `GM_QNA` WHERE `name` LIKE ? " 
+																+ "ORDER BY `seq`DESC "
+																+ "LIMIT ?, 10";
 	
 	public final static String SELECT_ARTICLE_MAX_SEQ = "SELECT MAX(`seq`) FROM `JBOARD_ARTICLE`";
 	

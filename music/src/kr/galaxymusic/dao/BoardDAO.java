@@ -3,6 +3,7 @@ package kr.galaxymusic.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,31 +21,55 @@ public class BoardDAO {
 	}
 	
 	private BoardDAO() {}
-	/*
-	public List<ArticleVO> getLatest() throws Exception {
+	
+	public List<ArticleVO> getNoticeLatest() throws Exception {
 		
 		Connection conn = DBConfig.getConnetion();
 		Statement stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery(SQL.SELECT_LATEST_ARTICLE);
+		ResultSet rs = stmt.executeQuery(SQL.SELECT_NOTICE_LATEST);
 		
-		List<ArticleVO> latestList = new ArrayList<>();
+		List<ArticleVO> NoticelatestList = new ArrayList<>();
 		
 		while(rs.next()) {
-			ArticleVO article = new ArticleVO();
-			article.setSeq(rs.getInt(1));
-			article.setTitle(rs.getString(2));
-			article.setRdate(rs.getString(3).substring(2, 10));
+			ArticleVO vo = new ArticleVO();
+			vo.setSeq(rs.getInt(1));
+			vo.setTitle(rs.getString(3));
+			vo.setRdate(rs.getString(8).substring(2, 10));
 			
-			latestList.add(article);
+			NoticelatestList.add(vo);
 		}
 		
 		rs.close();
 		stmt.close();
 		conn.close();
 		
-		return latestList;
+		return NoticelatestList;
 	}
-	*/
+	
+	public List<ArticleVO> getQnaLatest() throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery(SQL.SELECT_QNA_LATEST);
+		
+		List<ArticleVO> QnalatestList = new ArrayList<>();
+		
+		while(rs.next()) {
+			ArticleVO vo = new ArticleVO();
+			vo.setSeq(rs.getInt(1));
+			vo.setTitle(rs.getString(4));
+			vo.setRdate(rs.getString(9).substring(2, 10));
+			
+			QnalatestList.add(vo);
+		}
+		
+		rs.close();
+		stmt.close();
+		conn.close();
+		
+		return QnalatestList;
+	}
+	
 	public int getTotalNotice() throws Exception {
 		
 		Connection conn = DBConfig.getConnetion();
@@ -128,6 +153,66 @@ public class BoardDAO {
 		
 		Connection conn = DBConfig.getConnetion();
 		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_QNA_TOTAL_COUNT);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int total = 0;
+		if(rs.next()) {
+			total = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return total;
+	}
+	
+	public int TitleTotalNQna(String keyword) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_QNA_TITLE_TOTAL_COUNT);
+		psmt.setString(1, "%" + keyword + "%");
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int total = 0;
+		if(rs.next()) {
+			total = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return total;
+	}
+	
+	public int ContentTotalQna(String keyword) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_QNA_CONTENT_TOTAL_COUNT);
+		psmt.setString(1, "%" + keyword + "%");
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int total = 0;
+		if(rs.next()) {
+			total = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return total;
+	}
+	
+	public int NameTotalQna(String keyword) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_QNA_NAME_TOTAL_COUNT);
+		psmt.setString(1, "%" + keyword + "%");
 		
 		ResultSet rs = psmt.executeQuery();
 		
@@ -264,6 +349,105 @@ public class BoardDAO {
 		conn.close();
 		
 		return notices;		
+	}
+	
+	public List<ArticleVO> SearchQnaTitles(String keyword, int start) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_SEARCH_QNAS_TITLE);
+		psmt.setString(1, "%" + keyword + "%");
+		psmt.setInt(2, start);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		List<ArticleVO> qnas = new ArrayList<>();
+		while(rs.next()) {
+			ArticleVO vo = new ArticleVO();
+			vo.setSeq(rs.getInt(1));
+			vo.setParent(rs.getInt(2));
+			vo.setCate(rs.getString(3));
+			vo.setTitle(rs.getString(4));
+			vo.setContent(rs.getString(5));
+			vo.setUid(rs.getString(6));
+			vo.setName(rs.getString(7));
+			vo.setRegip(rs.getString(8));
+			vo.setRdate(rs.getString(9).substring(2, 10));
+			vo.setAnswer(rs.getString(10));
+			vo.setPass(rs.getString(11));
+			qnas.add(vo);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return qnas;	
+	}
+	
+	public List<ArticleVO> SearchQnaContents(String keyword, int start) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_SEARCH_QNAS_CONTENT);
+		psmt.setString(1, "%" + keyword + "%");
+		psmt.setInt(2, start);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		List<ArticleVO> qnas = new ArrayList<>();
+		while(rs.next()) {
+			ArticleVO vo = new ArticleVO();
+			vo.setSeq(rs.getInt(1));
+			vo.setParent(rs.getInt(2));
+			vo.setCate(rs.getString(3));
+			vo.setTitle(rs.getString(4));
+			vo.setContent(rs.getString(5));
+			vo.setUid(rs.getString(6));
+			vo.setName(rs.getString(7));
+			vo.setRegip(rs.getString(8));
+			vo.setRdate(rs.getString(9).substring(2, 10));
+			vo.setAnswer(rs.getString(10));
+			vo.setPass(rs.getString(11));
+			qnas.add(vo);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return qnas;		
+	}
+	
+	public List<ArticleVO> SearchQnaNames(String keyword, int start) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_SEARCH_QNAS_NAME);
+		psmt.setString(1, "%" + keyword + "%");
+		psmt.setInt(2, start);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		List<ArticleVO> qnas = new ArrayList<>();
+		while(rs.next()) {
+			ArticleVO vo = new ArticleVO();
+			vo.setSeq(rs.getInt(1));
+			vo.setParent(rs.getInt(2));
+			vo.setCate(rs.getString(3));
+			vo.setTitle(rs.getString(4));
+			vo.setContent(rs.getString(5));
+			vo.setUid(rs.getString(6));
+			vo.setName(rs.getString(7));
+			vo.setRegip(rs.getString(8));
+			vo.setRdate(rs.getString(9).substring(2, 10));
+			vo.setAnswer(rs.getString(10));
+			vo.setPass(rs.getString(11));
+			qnas.add(vo);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return qnas;	
 	}
 	
 	public List<ArticleVO> getQnas(int start) throws Exception {
