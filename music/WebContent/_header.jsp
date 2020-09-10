@@ -28,7 +28,7 @@
             <div class="main menu">
                 <ul>
                     <li>
-                        <a href="#">弦楽器</a>
+                        <a href="/music/board/goods-list.do">弦楽器</a>
                         <ol class="dept01">
                             <li><a href="#">バイオリン</a></li>
                             <li><a href="#">チェロ</a></li>
@@ -113,6 +113,9 @@
                     		<c:when test="${empty member}">
 		                        <li><a href="/music/user/login.do">ログイン</a></li>
 		                        <li><a href="/music/user/terms.do">新規登録</a></li>
+	                        </c:when>
+	                        <c:when test="${member.grade == 2 }">
+	                        	<li><a href="/music/admin/index.do">管理ページ</a></li>
 	                        </c:when>
 	                        <c:otherwise>
 		                        <li><a href="/music/user/logout.do">ログアウト</a></li>

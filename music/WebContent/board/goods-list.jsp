@@ -8,11 +8,11 @@
 	    <div class="select1">
 	        <h3>HOME > </h3>
 	        <select id="selectbox">
-	            <option value="val1">弦楽器</option>
-	            <option value="val2">小道具</option>
-	            <option value="val3">ケース</option>
-	            <option value="val4">共通用品</option>
-	            <option value="val5">メニュー５</option>
+	            <option value="1">弦楽器</option>
+	            <option value="2">小道具</option>
+	            <option value="3">ケース</option>
+	            <option value="4">共通用品</option>
+	            <option value="5">メニュー５</option>
 	        </select>
 	    </div>
 	    <div class="list_title">
@@ -86,13 +86,13 @@
 	            <li>
 	                <div class="goods_content">
 	                    <div class="goods_image">
-	                        <a href="#">
+	                        <a href="/music/board/goods-view.do">
 	                            <img src="/music/shop/img/violin_item_t1.png" alt="">
 	                        </a>
 	                    </div>
 	                    <div class="goods_title">
 	                        <div>
-	                            <a href="#">バイオリン1.バイオリン1.バイオリン1.バイオリン1</a>
+	                            <a href="/music/board/goods-view.do">バイオリン1.バイオリン1.バイオリン1.バイオリン1</a>
 	                        </div>
 	                        <div>
 	                            <span>370,000</span>

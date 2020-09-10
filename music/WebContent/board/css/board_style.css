@@ -152,7 +152,7 @@
     color: red;
 }
 .goods_list > .content_box > div:nth-of-type(2) .goods_content > .goods_title > div > span::after {
-    content: "�냶";
+    content: "円";
 }
 .paging_btn {
     display: block;
@@ -314,7 +314,7 @@
 }
 .goods_view > .content_box > .goods_info_box > div > table tr > th > span {}
 .goods_view > .content_box > .goods_info_box > div > table tr > th > span::after {
-    content: "�냶";
+    content: "円";
 }
 .goods_view > .content_box > .goods_info_box > div > table tr > td {
     padding: 10px;
@@ -325,7 +325,7 @@
     text-decoration: line-through;
 }
 .list_price > td > span::after {
-    content: "�냶";
+    content: "円";
 }
 .list_price > td > strong {
     font-size: 16px;
@@ -335,7 +335,7 @@
     font-weight: bold;
 }
 .selling_price > td::after {
-    content: "�냶";
+    content: "円";
 }
 .goods_view > .content_box > .goods_detail_box {
     float: left;
