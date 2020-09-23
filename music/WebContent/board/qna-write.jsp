@@ -55,7 +55,7 @@
                                     <span>パスワード</span>
                                 </td>
                                 <td>
-                                    <input type="password" name="pass">
+                                    <input type="password" name="pass"/>
                                 </td>
                             </tr>
                         </table>

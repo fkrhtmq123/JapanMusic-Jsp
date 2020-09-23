@@ -115,8 +115,7 @@
                                     <span>住所</span>
                                 </td>
                                 <td>
-                                    <input type="text" name="zip" placeholder="郵便番号を入力してください。">
-                                    <input type="button" name="btnzip" value="検索">
+                                    <input type="text" name="zip" placeholder="郵便番号を入力してください。" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr1','addr2');">
                                     <input type="text" name="addr1">
                                     <input type="text" name="addr2" placeholder="詳細を入力してください。">
                                 </td>

@@ -1,10 +1,11 @@
 eclipse.preferences.version=1
 encoding//WebContent/board/css/board_style.css=UTF-8
 encoding//WebContent/board/notice-view.jsp=UTF-8
-encoding//WebContent/board/qna-board-pass.jsp=UTF-8
 encoding//WebContent/board/qna-view.jsp=UTF-8
 encoding//WebContent/board/qna-write.jsp=UTF-8
 encoding//WebContent/board/qna.jsp=UTF-8
 encoding//WebContent/css/style.css=UTF-8
 encoding//WebContent/shop/css/shop_style.css=UTF-8
+encoding//WebContent/user/search-id-result.jsp=UTF-8
+encoding//WebContent/user/search-password-result.jsp=UTF-8
 encoding/<project>=UTF-8

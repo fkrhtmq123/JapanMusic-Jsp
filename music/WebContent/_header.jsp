@@ -7,10 +7,15 @@
     <title>GalaxyMusic</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script><!--최신 폰트어썸-->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="/music/js/slider.js"></script>
     <script src="/music/js/terms.js"></script>
+    <script src="/music/js/checkUid.js"></script>
+    <script src="/music/js/checkPass.js"></script>
+    <script src="/music/js/checkEmail.js"></script>
+    <script src="/music/js/validation.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="/music/css/style.css">
@@ -107,15 +112,23 @@
             <div class="main member">
                 <div>
                     <a href="#"><i class="fas fa-search"></i></a>
-                    <a href="/music/user/login.do"><i class="fas fa-user"></i></a>
+                    <c:choose>
+                    	<c:when test="${empty member}">
+                    		<a href="/music/user/login.do"><i class="fas fa-user"></i></a>
+                    	</c:when>
+                    	<c:otherwise>
+                    		<a href="/music"><i class="fas fa-user"></i></a>
+                    	</c:otherwise>
+                    </c:choose>
                     <ul>
                     	<c:choose>
                     		<c:when test="${empty member}">
 		                        <li><a href="/music/user/login.do">ログイン</a></li>
 		                        <li><a href="/music/user/terms.do">新規登録</a></li>
 	                        </c:when>
-	                        <c:when test="${member.grade == 2 }">
+	                        <c:when test="${member.grade == 2}">
 	                        	<li><a href="/music/admin/index.do">管理ページ</a></li>
+	                        	<li><a href="/music/user/logout.do">ログアウト</a></li>
 	                        </c:when>
 	                        <c:otherwise>
 		                        <li><a href="/music/user/logout.do">ログアウト</a></li>

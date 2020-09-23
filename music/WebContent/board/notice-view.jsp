@@ -38,12 +38,14 @@
                         <div class="listbtn">
                             <input type="button" name="listbtn" value="リスト" onClick="location.href='/music/board/notice-list.do'">
                         </div>
-                        <div class="modifybtn">
-                            <input type="button" name="modifybtn" value="修正">
-                        </div>
-                        <div class="deletebtn">
-                            <input type="button" name="deletebtn" value="削除">
-                        </div>
+                        <c:if test="${member.grade == 2 }">
+	                        <div class="modifybtn">
+	                            <input type="button" name="modifybtn" value="修正">
+	                        </div>
+	                        <div class="deletebtn">
+	                            <input type="button" name="deletebtn" value="削除" onClick="location.href='/music/board/notice-delete.do?seq=${ vo.seq }'">
+	                        </div>
+                        </c:if>
                     </div>
                 </form>
             </section>

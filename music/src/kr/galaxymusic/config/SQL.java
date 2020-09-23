@@ -21,22 +21,21 @@ public class SQL {
 												+ "`regip`=?, "
 												+ "`rdate`=NOW()";
 	
-	/*
-	public final static String SELECT_CHECK_UID = "SELECT COUNT(`uid`) FROM `JBOARD_MEMBER` "
+	
+	public final static String SELECT_CHECK_UID = "SELECT COUNT(`uid`) FROM `GM_MEMBER` "
 													+ "WHERE `uid`=?";
 	
-	public final static String SELECT_CHECK_PASS = "SELECT COUNT(`pass`) FROM `JBOARD_MEMBER` "
+	public final static String SELECT_CHECK_PASS = "SELECT COUNT(`pass`) FROM `GM_MEMBER` "
 													+ "WHERE `pass`=?";
 	
-	public final static String SELECT_CHECK_NICK = "SELECT COUNT(`nick`) FROM `JBOARD_MEMBER` "
-													+ "WHERE `nick`=?";
-	
-	public final static String SELECT_CHECK_HP = "SELECT COUNT(`hp`) FROM `JBOARD_MEMBER` "
-													+ "WHERE `hp`=?";
-	
-	public final static String SELECT_CHECK_EMAIL = "SELECT COUNT(`email`) FROM `JBOARD_MEMBER` "
+	public final static String SELECT_CHECK_EMAIL = "SELECT COUNT(`email`) FROM `GM_MEMBER` "
 													+ "WHERE `email`=?";
-	*/
+	
+	public final static String SELECT_SEARCH_ID = "SELECT `uid` FROM `GM_MEMBER` "
+													+ "WHERE `name`=? AND `email`=?";
+	
+	public final static String SELECT_SEARCH_PASSWORD = "SELECT `pass` FROM `GM_MEMBER` "
+														+ "WHERE `uid`=? AND `name`=? AND `email`=?";
 	
 	// 게시물 관련
 	public final static String SELECT_NOTICE_LATEST = "SELECT * FROM `GM_NOTICE` "
@@ -74,10 +73,13 @@ public class SQL {
 	/*
 	public final static String UPDATE_ARTICLE = "UPDATE `JBOARD_ARTICLE` SET `title`=?, `content`=? "
 												+ "WHERE `seq`=?";
-	
-	public final static String DELETE_ARTICLE = "DELETE FROM `JBOARD_ARTICLE` "
-												+ "WHERE `seq`=? OR `parent`=?";
 	*/
+	public final static String DELETE_NOTICE = "DELETE FROM `GM_NOTICE` "
+												+ "WHERE `seq`=?";
+	
+	public final static String DELETE_QNA = "DELETE FROM `GM_QNA` "
+												+ "WHERE `seq`=?";
+	
 	public final static String UPDATE_HIT = "UPDATE `GM_NOTICE` SET `hit` = `hit` + 1 "
 												+ "WHERE `seq`=?";
 	
@@ -138,5 +140,5 @@ public class SQL {
 												+ "`pass`=PASSWORD(?)";
 	
 	public final static String SELECT_QNA_PASS = "SELECT * FROM `GM_QNA` "
-												+ "WHERE `pass`=PASSWORD(?)";
+												+ "WHERE `seq`=? AND `pass`=PASSWORD(?)";
 }

@@ -24,13 +24,13 @@
                     <ul>
                         <li><a href="/music/user/terms.do">新規登録</a></li>
                         <li>
-                            <a href="#">
+                            <a href="/music/user/search-id.do">
                                 IDを忘れた方は<br>こちら
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                パスワードを忘れた方は<br>こちら
+                            <a href="/music/user/search-password.do">
+                                	パスワードを忘れた方は<br>こちら
                             </a>
                         </li>
                     </ul>

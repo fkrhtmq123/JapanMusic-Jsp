@@ -659,6 +659,7 @@ footer > section > .companyinfo > div p {
     margin-left: 10px;
 }
 .register .content_box > section > form > .member_register > table tr > td > input {
+	display: block;
     width: 400px;
     height: 30px;
     padding: 0 10px;
@@ -669,13 +670,10 @@ footer > section > .companyinfo > div p {
 .register .content_box > section > form > .member_register > table tr > td > input[name=zip] {
     width: 200px;
 }
-.register .content_box > section > form > .member_register > table tr > td > input[type=button] {
-    width: 70px;
-}
-.register .content_box > section > form > .member_register > table tr > td > input:nth-child(3) {
+.register .content_box > section > form > .member_register > table tr > td > input[name=addr1] {
     margin-top: 10px;
 }
-.register .content_box > section > form > .member_register > table tr > td > input:nth-child(4) {
+.register .content_box > section > form > .member_register > table tr > td > input[name=addr2] {
     margin-top: 10px;
 }
 .register .content_box > section > form > .resultbtn {
@@ -765,4 +763,272 @@ footer > section > .companyinfo > div p {
     font-size: 20px;
     margin-left: 550px;
     margin-bottom: 100px;
+}
+/* search_id */
+.search_id {}
+.search_id > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.search_id .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.search_id .select > h3 {
+    float: left;
+}
+.search_id .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.search_id .content_box {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.search_id .content_box > div {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.search_id .content_box > div > h4 {
+    font-size: 35px;
+}
+.search_id .content_box > .member_login {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 60px 0 0 70px;
+    border: 1px solid #d5d5d5;
+    box-sizing: border-box;
+}
+.search_id .content_box > .member_login > form {
+    position: relative;
+    width: 450px;
+    height: auto;
+}
+.search_id .content_box > .member_login div {
+    width: 280px;
+    display: inline-block;
+}
+.search_id .content_box > .member_login div > input {
+    float: left;
+    width: 280px;
+    height: 36px;
+    margin-top: 13px;
+    padding-left: 5px;
+    border: 1px solid #757575;
+}
+.search_id .content_box > .member_login > form > input {
+    position: absolute;
+    top: 5px;
+    width: 150px;
+    height: 100px;
+    margin-left: 15px;
+    font-size: 18px;
+    border: 1px solid #757575;
+}
+/* search_password */
+.search_password {}
+.search_password > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.search_password .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.search_password .select > h3 {
+    float: left;
+}
+.search_password .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.search_password .content_box {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.search_password .content_box > div {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.search_password .content_box > div > h4 {
+    font-size: 35px;
+}
+.search_password .content_box > .member_login {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 60px 0 0 70px;
+    border: 1px solid #d5d5d5;
+    box-sizing: border-box;
+}
+.search_password .content_box > .member_login > form {
+    position: relative;
+    width: 450px;
+    height: auto;
+}
+.search_password .content_box > .member_login div {
+    width: 280px;
+    display: inline-block;
+}
+.search_password .content_box > .member_login div > input {
+    float: left;
+    width: 280px;
+    height: 36px;
+    margin-top: 13px;
+    padding-left: 5px;
+    border: 1px solid #757575;
+}
+.search_password .content_box > .member_login > form > input {
+    position: absolute;
+    top: 5px;
+    width: 150px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 18px;
+    border: 1px solid #757575;
+}
+/* search_id_result */
+.search_id_result {}
+.search_id_result > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.search_id_result .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.search_id_result .select > h3 {
+    float: left;
+}
+.search_id_result .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.search_id_result .content_box {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.search_id_result .content_box > div {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.search_id_result .content_box > div > h4 {
+    font-size: 35px;
+}
+.search_id_result .content_box > .member_login {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 60px 0 0 70px;
+    border: 1px solid #d5d5d5;
+
+    box-sizing: border-box;
+}
+.search_id_result .content_box > .member_login > form {
+    position: relative;
+    width: 450px;
+    height: auto;
+}
+.search_id_result .content_box > .member_login > form > input {
+    margin-top: 80px;
+    margin-left: 170px;
+    font-size: 18px;
+}
+.search_id_result .content_box > .member_login div {
+    width: 430px;
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 30px;
+}
+.search_id_result .content_box > .member_login div > span {
+    font-size: 30px;
+    font-weight: bold;
+}
+/* search_password_result */
+.search_password_result {}
+.search_password_result > section {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.search_password_result .select {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.search_password_result .select > h3 {
+    float: left;
+}
+.search_password_result .select > span {
+    float: left;
+    margin-left: 5px;
+    font-weight: bold
+}
+.search_password_result .content_box {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.search_password_result .content_box > div {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.search_password_result .content_box > div > h4 {
+    font-size: 35px;
+}
+.search_password_result .content_box > .member_login {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 60px 0 0 70px;
+    border: 1px solid #d5d5d5;
+    box-sizing: border-box;
+}
+.search_password_result .content_box > .member_login > form {
+    position: relative;
+    width: 450px;
+    height: auto;
+}
+.search_password_result .content_box > .member_login > form > input {
+    margin-top: 80px;
+    margin-left: 170px;
+    font-size: 18px;
+}
+.search_password_result .content_box > .member_login div {
+    width: 430px;
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 30px;
+}
+.search_password_result .content_box > .member_login div > span {
+    font-size: 30px;
+    font-weight: bold;
 }

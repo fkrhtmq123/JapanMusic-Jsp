@@ -3,7 +3,6 @@ package kr.galaxymusic.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 import kr.galaxymusic.config.DBConfig;
 import kr.galaxymusic.config.SQL;
@@ -57,7 +56,68 @@ public class UserDAO {
 
 	}
 	
-	public void checkUid() throws Exception {}
+	public int checkUid(String uid) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_CHECK_UID);
+		psmt.setString(1, uid);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int result = 0;
+		
+		if(rs.next()) {
+			result = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return result;
+	}
+	
+	public int checkPass(String pass) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_CHECK_PASS);
+		psmt.setString(1, pass);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int result = 0;
+		
+		if(rs.next()) {
+			result = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return result;
+	}
+	
+	public int checkEmail(String email) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_CHECK_EMAIL);
+		psmt.setString(1, email);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int result = 0;
+		
+		if(rs.next()) {
+			result = rs.getInt(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return result;
+	}
 	
 	public MemberVO login(String uid, String pass) throws Exception {
 		
@@ -92,7 +152,52 @@ public class UserDAO {
 		
 		return vo;
 	}
-
-	public void checklogin() throws Exception {}
-
+	
+	public String searchID(String name, String email) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_SEARCH_ID);
+		psmt.setString(1, name);
+		psmt.setString(2, email);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		String uid = null;
+		
+		if(rs.next()) {
+			uid = rs.getString(1);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return uid;
+		
+	}
+	
+	public String searchPassword(String uid, String name, String email) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_SEARCH_PASSWORD);
+		psmt.setString(1, uid);
+		psmt.setString(2, name);
+		psmt.setString(3, email);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		String pass = null;
+		
+		if(rs.next()) {
+			pass = rs.getString("GM_MEMBER.pass");
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return pass;
+		
+	}
+	
 }

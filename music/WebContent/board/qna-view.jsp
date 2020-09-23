@@ -55,14 +55,16 @@
                     </div>
                     <div>
                         <div class="listbtn">
-                            <input type="button" name="listbtn" value="リスト">
+                            <input type="button" name="listbtn" value="リスト" onClick="location.href='/music/board/qna-list.do'">
                         </div>
+                        <c:if test="${member.uid == qvo.uid || member.grade == 2 }">
                         <div class="modifybtn">
                             <input type="button" name="modifybtn" value="修正">
                         </div>
                         <div class="deletebtn">
-                            <input type="button" name="deletebtn" value="削除">
+                            <input type="button" name="deletebtn" value="削除" onClick="location.href='/music/board/qna-delete.do?seq=${ qvo.seq }'">
                         </div>
+                        </c:if>
                     </div>
                 </form>
             </section>

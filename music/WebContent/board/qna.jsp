@@ -1,6 +1,34 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../_header.jsp" %>
+<script>
+	$(document).ready(function(){
+	    var article = $('.content_box > table tr > td > a');
+	
+	    article.click(function(){
+	    	var seq = $(this);
+	        var result = prompt('비밀번호를 입력해주세요');
+			var tag = result;
+	        var pass = tag.val();
+	        var json = {"pass" : pass};
+	        
+	        $.ajax({
+	        	type: 'POST',
+	        	url: '/music/board/qna-board-pass.do?seq='+seq+'&pass=' + pass,
+	        	dataType: 'json',
+	        	success : function(data){
+	        		if(data.Presult == 1) {
+	        			location.href='/music/board/qna-view.do?seq=${ qvo.seq }';
+	        		} else {
+	        			alert('틀립니다.');
+	        			return false;
+	        		}
+	        	}
+	        })
+	        
+	    })
+	})
+</script>
 <section class="header_image">
     <span>楽器はGalaxy...</span>
 </section>
@@ -39,9 +67,11 @@
 		         </c:if>
             </c:forEach>
         </table>
-        <div class="qna_write_btn">
-            <a href="/music/board/qna-write.do">入力</a>
-        </div>
+        <c:if test="${member.grade > 0}">
+	        <div class="qna_write_btn">
+	            <a href="/music/board/qna-write.do">入力</a>
+	        </div>
+        </c:if>
         <span class="paging_btn">
             <c:choose>
 	        	<c:when test="${empty category}">

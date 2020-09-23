@@ -574,6 +574,52 @@ public class BoardDAO {
 		conn.close();		
 	}
 	
-	public void deleteArticle() throws Exception {}
+	public void deleteNotice(String seq) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.DELETE_NOTICE);
+		psmt.setString(1, seq);
+		
+		psmt.executeUpdate();
+		psmt.close();
+		conn.close();
+		
+	}
+	
+	public void deleteQna(String seq) throws Exception {
+
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.DELETE_QNA);
+		psmt.setString(1, seq);
+		
+		psmt.executeUpdate();
+		psmt.close();
+		conn.close();
+		
+	}
+	
+	public int passQna(String seq, String pass) throws Exception {
+		
+		Connection conn = DBConfig.getConnetion();
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_QNA_PASS);
+		psmt.setString(1, seq);
+		psmt.setString(2, pass);
+		
+		ResultSet rs = psmt.executeQuery();
+		
+		int result = 0;
+		
+		if(rs.next()) {
+			result = rs.getInt(2);
+		}
+		
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return result;
+	}
+	
 	public void modifyArticle() throws Exception {}
+	
 }

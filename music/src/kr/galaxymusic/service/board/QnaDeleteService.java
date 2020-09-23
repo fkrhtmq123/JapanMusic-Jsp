@@ -5,23 +5,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.galaxymusic.controller.CommonService;
 import kr.galaxymusic.dao.BoardDAO;
-import kr.galaxymusic.vo.ArticleVO;
 
-public class NoticeViewService implements CommonService {
+public class QnaDeleteService implements CommonService {
 
 	@Override
 	public String requestProc(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		
-		String seq   = req.getParameter("seq");
+		String seq = req.getParameter("seq");
 		
 		BoardDAO dao = BoardDAO.getInstance();
+		dao.deleteQna(seq);
 		
-		ArticleVO vo = dao.getNotice(seq);
-		
-		req.setAttribute("vo", vo);
-		
-		return "/board/notice-view.jsp";
-		
+		return "redirect:/music/board/qna-list.do";
 	}
 
 }

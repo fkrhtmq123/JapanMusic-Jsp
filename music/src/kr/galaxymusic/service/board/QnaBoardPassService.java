@@ -3,25 +3,26 @@ package kr.galaxymusic.service.board;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.JsonObject;
+
 import kr.galaxymusic.controller.CommonService;
 import kr.galaxymusic.dao.BoardDAO;
-import kr.galaxymusic.vo.ArticleVO;
 
-public class NoticeViewService implements CommonService {
+public class QnaBoardPassService implements CommonService {
 
 	@Override
 	public String requestProc(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		
-		String seq   = req.getParameter("seq");
+		String seq = req.getParameter("seq");
+		String pass = req.getParameter("pass");
 		
 		BoardDAO dao = BoardDAO.getInstance();
+		int result = dao.passQna(seq, pass);
 		
-		ArticleVO vo = dao.getNotice(seq);
+		JsonObject json = new JsonObject();
+		json.addProperty("result", result);
 		
-		req.setAttribute("vo", vo);
-		
-		return "/board/notice-view.jsp";
-		
+		return "json:"+json.toString();
 	}
 
 }
